@@ -1,21 +1,35 @@
-.main__image{
-    
-    width: 1500px;
-    margin-left: 150px;
-    box-shadow: 0 2px 50px DimGray;
-    height:550px;
-    margin-right: 150px;
-    border-radius: 8px;
+.main__image {
+  width: 1500px;
+  height: 550px;
+  margin-top: 30px;
+  margin-left: 150px;
+  margin-right: 150px;
+  border-radius: 8px;
+  box-shadow: 0 2px 50px DimGray;
 }
-.main__title{
-  
-    position: relative;
-    background-color: black;
-    width: 600px;
-    height: 200px;
-    position: absolute;
-    margin-left: 900px;
-    margin-top: 30px;
-    box-shadow: 0 2px 50px gray;
-    border-radius: 4px;
+.main__title {
+  position: absolute;
+  background-color: white;
+  width: 600px;
+  height: 150px;
+//   margin-left: 900px;
+//   margin-top: 30px;
+  border-radius: 4px;
+  box-shadow: 0 2px 50px gray;
+}
+.main__txt {
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-size: 45px;
+}
+
+.main__ornament--front {
+  height: 15px;
+  background-color: rgb(6, 52, 6);
+}
+
+.main__ornament--back {
+  height: 30px;
+  background-color: black
 }
