@@ -10,6 +10,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { SummeryComponent } from './components/summery/summery.component';
 import { PlaceComponent } from './pages/place/place.component';
 import { ReservationComponent } from './pages/reservation/reservation.component';
+import { PlacesComponent } from './components/places/places.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ReservationComponent } from './pages/reservation/reservation.component'
     NavComponent,
     SummeryComponent,
     PlaceComponent,
-    ReservationComponent
+    ReservationComponent,
+    PlacesComponent
   ],
   imports: [
     BrowserModule,
