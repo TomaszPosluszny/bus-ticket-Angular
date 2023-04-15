@@ -12,4 +12,7 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logoUrl: string =
+  'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/master/src/app/components/images/logo.png';
+  description: string = ' This is plane';
 }

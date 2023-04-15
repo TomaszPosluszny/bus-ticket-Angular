@@ -1,12 +1,40 @@
 .nav {
   display: flex;
   justify-content: space-around;
+  top: 0;
   width: 100vw;
   height: 70px;
-  top: 0;
   background-color: black;
-}
-.i{
-    background-color:black;
+  &__txt {
     color: white;
+    font-size: 30px;
+  }
+  &__logo {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.9;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-left: 700px;
+  margin-top: 15px;
+  width: 100px;
+  height: 30px;
+  transition: color 0.3s;
+  border: 1px solid green;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: green;
+  color: white;
+
 }
