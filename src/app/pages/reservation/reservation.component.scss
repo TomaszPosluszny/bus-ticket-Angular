@@ -1,76 +1,92 @@
-.main__image {
-  width: 1500px;
-  height: 550px;
-  margin-top: 30px;
-  margin-left: 150px;
-  margin-right: 150px;
-  border-radius: 8px;
-  box-shadow: 0 2px 50px DimGray;
-}
-.main__title {
-  position: absolute;
-  background-color: white;
-  width: 650px;
-  height: 150px;
-  border-radius: 4px;
-  box-shadow: 0 2px 50px gray;
-}
-.main__txt {
-  display: flex;
-  justify-content: center;
-  color: black;
-  font-size: 45px;
-}
 
-.main__ornament--front {
-  height: 15px;
-  background-color: rgb(28, 83, 28);
-}
+// *{
+// 	box-sizing: border-box;
+// 	margin: 0;
+// 	padding: 0;
+// }
+.main {
+  &__image {
+    width: 1500px;
+    height: 550px;
+    margin-top: 95px;
+    margin-left: 150px;
+    margin-right: 150px;
+    border-radius: 8px;
+    box-shadow: 0 2px 50px DimGray;
+  }
+  &__title {
+    margin-top: 70px;
+    position: absolute;
+    background-color: white;
+    width: 650px;
+    height: 150px;
+    border-radius: 4px;
+    box-shadow: 0 2px 50px gray;
+  }
+  &__txt {
+    display: flex;
+    font-family: "Cinzel", sans-serif;
+    justify-content: center;
+    color: black;
+    font-size: 45px;
+  }
 
-.main__ornament--back {
-  height: 30px;
-  background-color: black;
+  &__ornament {
+    &--front {
+      height: 15px;
+      background-color: rgb(28, 83, 28);
+    }
+    &--back {
+      height: 30px;
+      background-color: black;
+    }
+  }
 }
 
 .places {
   position: absolute;
   background-color: white;
-  margin-top: 200px;
+  margin-top: 280px;
   margin-left: -700px;
   width: 200px;
   height: 350px;
   border: 1px solid black;
   border-radius: 4px;
   box-shadow: 0 2px 50px gray;
-  
 }
-.choice{
-    position: absolute;
-    background-color: white;
-    margin-top: 200px;
-    margin-left: 700px;
-    width: 200px;
-    height: 350px;
-    border: 1px solid black;
-    border-radius: 4px;
-    box-shadow: 0 2px 50px gray;
+.choice {
+  position: absolute;
+  background-color: white;
+  margin-top: 280px;
+  margin-left: 700px;
+  width: 200px;
+  height: 350px;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 0 2px 50px gray;
 }
-.button{
-    display: flex;
+.button {
+  display: flex;
   justify-content: center;
   align-items: center;
-    position: absolute;
-    background-color: white;
-    color: black;
-    margin-top: 500px;
-    width: 100px;
-    height: 30px; 
-    border: 1px solid black;
-    border-radius: 8px;
-    box-shadow: 0 2px 50px gray;
-    cursor: pointer;
+  position: absolute;
+  font-family: "Raleway", sans-serif;
+  background-color: white;
+  color: black;
+  margin-top: 570px;
+  width: 100px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 0 2px 50px gray;
+  cursor: pointer;
 }
 .button:hover {
-    background-color: black;
-   color: white;
+  background-color: black;
+  color: white;
+}
+
+.nav{
+top: 0;
+  position: absolute;
 }
