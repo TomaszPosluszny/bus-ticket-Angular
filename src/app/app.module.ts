@@ -11,6 +11,7 @@ import { SummeryComponent } from './components/summery/summery.component';
 import { PlaceComponent } from './pages/place/place.component';
 import { ReservationComponent } from './pages/reservation/reservation.component';
 import { PlacesComponent } from './components/places/places.component';
+import { HashLocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,12 @@ import { PlacesComponent } from './components/places/places.component';
     SummeryComponent,
     PlaceComponent,
     ReservationComponent,
-    PlacesComponent
+    PlacesComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
+  imports: [BrowserModule, AppRoutingModule],
+  providers: [
+    { provide: PathLocationStrategy, useClass: HashLocationStrategy },
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

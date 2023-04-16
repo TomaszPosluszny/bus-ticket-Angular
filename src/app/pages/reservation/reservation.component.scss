@@ -1,4 +1,6 @@
 .main {
+  display: flex;
+  justify-content: center;
   &__image {
     width: 560px;
     height: 550px;
