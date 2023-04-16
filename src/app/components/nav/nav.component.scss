@@ -6,12 +6,29 @@
   height: 70px;
   background-color: black;
   &__txt {
+    margin-right: 10px;
+    margin-left: 40px;
     color: white;
     font-size: 30px;
   }
   &__logo {
     display: flex;
     justify-content: space-around;
+  }
+  &__image {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    cursor: pointer;
+  }
+  &__image:hover {
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
   }
 }
 
@@ -25,7 +42,7 @@
   color: white;
   text-transform: uppercase;
   text-decoration: none;
-  margin-left: 700px;
+  margin-left: 300px;
   margin-top: 15px;
   width: 100px;
   height: 30px;
@@ -36,5 +53,17 @@
 .button:hover {
   background-color: green;
   color: white;
+}
 
+@media (max-width: 576px) {
+  .nav {
+    &__txt {
+      margin-right: 10px;
+      margin-left: 100px;
+    }
+  }
+  .button {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
