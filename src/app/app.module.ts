@@ -12,6 +12,7 @@ import { PlaceComponent } from './pages/place/place.component';
 import { ReservationComponent } from './pages/reservation/reservation.component';
 import { PlacesComponent } from './components/places/places.component';
 import { HashLocationStrategy, PathLocationStrategy } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { HashLocationStrategy, PathLocationStrategy } from '@angular/common';
     ReservationComponent,
     PlacesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule,HttpClientModule ],
   providers: [
     { provide: PathLocationStrategy, useClass: HashLocationStrategy },
   ],
