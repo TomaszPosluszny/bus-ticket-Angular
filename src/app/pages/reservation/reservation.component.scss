@@ -9,8 +9,8 @@
     box-shadow: 0 2px 50px DimGray;
   }
   &__title {
-    margin-top: 70px;
     position: absolute;
+    margin-top: 70px;
     background-color: white;
     width: 650px;
     height: 150px;
@@ -38,6 +38,12 @@
       color: white;
       text-align: center;
     }
+  }
+  &__temp{
+    position: absolute;
+    color: white;
+    font-size: 12px;
+
   }
 }
 
