@@ -11,16 +11,13 @@ export class ReservationComponent implements OnInit {
 
   dataTemp: any = '';
   kalwinTemp: number = 273.15;
-  miasto:string = 'Warszawa'
- 
-  
-  
-  ngOnInit(): void {this.weatherService.city = 'Wrocław';
-    
+  miasto: string = 'Warszawa';
+
+  ngOnInit(): void {
+    this.weatherService.city = 'Londyn';
+
     this.weatherService.getCity().subscribe((data: any) => {
       this.dataTemp = data;
-      
-      
     });
   }
 
@@ -29,14 +26,9 @@ export class ReservationComponent implements OnInit {
   description: string = ' This is plane';
 
   nameCites() {
-     
-    return (
-      this.weatherService.city)
-
+    return this.weatherService.city;
   }
   tempCites() {
-    return (
-     Math.round(this.dataTemp.main?.temp - this.kalwinTemp)
-    );
+    return Math.round(this.dataTemp.main?.temp - this.kalwinTemp);
   }
 }

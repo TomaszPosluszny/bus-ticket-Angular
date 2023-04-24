@@ -1,1 +1,19 @@
-<p>places works!</p>
+<p>Places</p>
+
+<form [formGroup]="PlacesForm">
+  Email:
+  <input type="text" formControlName="email" />
+
+  <div *ngIf="email.errors?.['minlength']">Podaj emaila</div>
+  Password:
+  <input type="password" formControlName="password" />
+
+  <div *ngIf="password.errors?.['minlength']">
+    Za malo znakow. Minimum to
+    {{ password.errors?.['minlength'].requiredLength }} a Ty wpisałeś do tej
+    pory {{ password.errors?.['minlength'].actualLength}}
+  </div>
+  <button [disabled]="!PlacesForm.valid" (click)="zatwierdz()">
+    Zatwierdz
+  </button>
+</form>

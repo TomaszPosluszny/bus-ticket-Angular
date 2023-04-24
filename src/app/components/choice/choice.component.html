@@ -1,1 +1,21 @@
-<p>choice works!</p>
+<p>Choice</p>
+
+
+<form [formGroup]="ChoiceForm">
+  Email:
+  <input type="text" formControlName="email" />
+
+  <div *ngIf="email.errors?.['minlength']">Podaj emaila</div>
+  Password:
+  <input type="password" formControlName="password" />
+
+  <div *ngIf="password.errors?.['minlength']">
+    Za malo znakow. Minimum to
+    {{ password.errors?.['minlength'].requiredLength }} a Ty wpisałeś do tej
+    pory {{ password.errors?.['minlength'].actualLength}}
+  </div>
+  
+</form>
+<button [disabled]="!ChoiceForm.valid" (click)="zatwierdz()">
+    Zatwierdz
+  </button>
