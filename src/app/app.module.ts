@@ -14,6 +14,7 @@ import { PlacesComponent } from './components/places/places.component';
 import { HashLocationStrategy, PathLocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReservationComponent,
     PlacesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule, FormsModule ],
   providers: [
     { provide: PathLocationStrategy, useClass: HashLocationStrategy },
   ],

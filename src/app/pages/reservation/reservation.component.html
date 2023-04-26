@@ -6,9 +6,31 @@
   <p class="main__txt">Buy a plane ticket easily</p>
   <div class="main__ornament--back">The future airplane is with us !</div>
 </div>
-<p class="main__temp">{{nameCites()}} {{tempCites()}}°C</p>
+<!-- <p class="main__temp">{{nameCites()}} {{tempCites()}}°C</p> -->
 <app-places class="places"></app-places>
 <app-choice class="choice"></app-choice>
 <div class="button">Accept</div></div>
+<div class="widget">
+
+	<h3 class="widget__title">Weather</h3>
+
+	<div class="widget__select-wrapper">
+
+		<select [(ngModel)]="selectedCity"
+            class="widget__select"
+    >
+      <option [ngValue]="null">Select city...</option>
+      <option *ngFor="let city of cities"
+              [ngValue]="city"
+      >
+        {{city.name}}
+      </option>
+
+    </select>
 
 
+		<button (click)="update()" class="widget__submit">Update</button>
+
+	</div>
+<app-summery [city]="updatedCity"></app-summery>
+</div>
