@@ -7,37 +7,34 @@ import {
   Validators,
 } from '@angular/forms';
 
+import { NgForm } from '@angular/forms';
+
 @Component({
   selector: 'app-choice',
   templateUrl: './choice.component.html',
   styleUrls: ['./choice.component.scss'],
 })
 export class ChoiceComponent implements OnInit {
-  ChoiceForm = new FormGroup({
-    email: new FormControl('', {
-      validators: [
-        Validators.required,
-        Validators.email,
-        Validators.minLength(8),
-      ],
-    }),
-    password: new FormControl('', {
-      validators: [Validators.minLength(6)],
-    }),
-  });
+  firstName:string = '';
+  employment:boolean = false; 
+  hobbies:string = '';
+  desc:string = '';
 
-  zatwierdz() {
-    console.log(this.ChoiceForm.value);
+  addCustomer(formValue:NgForm){
+    console.log(formValue.value)
+    console.log(formValue.valid)
   }
+
+
+
+
+
+
+
 
   constructor() {}
 
   ngOnInit() {}
 
-  get email() {
-    return this.ChoiceForm.controls['email'];
-  }
-  get password() {
-    return this.ChoiceForm.controls['password'];
-  }
+
 }

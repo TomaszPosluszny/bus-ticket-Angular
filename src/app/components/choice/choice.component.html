@@ -1,21 +1,35 @@
 <p>Choice</p>
 
 
-<form [formGroup]="ChoiceForm">
-  Email:
-  <input type="text" formControlName="email" />
 
-  <div *ngIf="email.errors?.['minlength']">Podaj emaila</div>
-  Password:
-  <input type="password" formControlName="password" />
+  <form #addUserForm="ngForm" (submit)="addCustomer(addUserForm)">
 
-  <div *ngIf="password.errors?.['minlength']">
-    Za malo znakow. Minimum to
-    {{ password.errors?.['minlength'].requiredLength }} a Ty wpisałeś do tej
-    pory {{ password.errors?.['minlength'].actualLength}}
-  </div>
+    <label for="firstName"> Podaj imię </label>
+    <input type="text" [(ngModel)]="firstName" name="firstName" required minlength="10" maxlength="20"> 
   
-</form>
-<button [disabled]="!ChoiceForm.valid" (click)="zatwierdz()">
-    Zatwierdz
-  </button>
+    <br><br> 
+  
+    <label for="firstName"> Zatrudnienie </label>
+    <input type="checkbox" [(ngModel)]="employment" name="employment" checked required> 
+  
+    <br><br> 
+  
+    <select [(ngModel)]="hobbies" name="hobbies" required>
+        <option value="" disabled>Wybierz coś</option>
+        <option value="football">Piłka nożna</option>
+        <option value="volleyball">Siaktówka</option>
+    </select>
+  
+    <br><br> 
+  
+    <textarea [(ngModel)]="desc" name="desc" required>  </textarea>
+  
+    <br><br> 
+  
+    <button type="submit" [disabled]="!addUserForm.valid" > Dodaj</button>
+  
+  </form>
+  
+  {{desc}}
+    {{ addUserForm.value | json}}
+    
