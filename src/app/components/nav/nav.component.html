@@ -4,6 +4,7 @@
       ><p class="nav__txt">maStar</p>
       <a routerLink="/"><img class="nav__image" [src]="logoUrl" [alt]="description"
     /></a></span>
+    <p class="nav__temp">{{nameCites()}} {{tempCites()}}°C </p><p class="nav__data">{{ today | date:'dd/MM/yyyy HH:mm:ss'}}</p>
     <div class="button">Login</div>
   </div>
 

@@ -14,6 +14,8 @@ const API_KEY = "f9fe3ecd6dcb482c2724f8261001d8e4";
 export class WeatherService {
   constructor(private http: HttpClient) {}
 
+  nameCity:string = ''
+
   getCities$: Observable<City[]> = this.http
     .get<City[]>("/assets/cities.json")
     .pipe(
@@ -32,6 +34,10 @@ export class WeatherService {
         //TODO to remove, for quick debug only
         tap(r => console.log(r))
       );
+
+      getCity() {
+        return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.nameCity}&appid=f9fe3ecd6dcb482c2724f8261001d8e4`);
+      }
 }
 
  
@@ -41,4 +47,3 @@ export class WeatherService {
 //   getCity() {
 //     return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.tomek}&appid=f9fe3ecd6dcb482c2724f8261001d8e4`);
 //   }
-

@@ -97,7 +97,7 @@
   align-items: flex-start;
 }
 @media (max-width: 576px) {
-  .main {
+  .main {margin-top: 70px;
     &__image {
       width: 300px;
       height: 850px;
