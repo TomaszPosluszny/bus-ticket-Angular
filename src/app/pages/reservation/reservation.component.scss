@@ -62,7 +62,7 @@
   position: absolute;
   background-color: white;
   margin-top: 300px;
-  margin-left: 400px;
+  // margin-left: 400px;
   width: 150px;
   height: 280px;
   border: 1px solid green;
@@ -118,6 +118,18 @@
         font-size: 15px;
       }
     }
+    &__temp {
+      margin-left: 0px;
+      position: absolute;
+      color: white;
+      font-size: 16px;
+    }
+    &__data {
+      margin-top: 80px;
+      position: absolute;
+      color: black;
+      font-size: 16px;
+    }
   }
 
   .places {
@@ -155,9 +167,10 @@
     height: 280px;
   }
   .choice {
-    margin-top: 300px;
-    margin-left: -700px;
-    width: 250px;
-    height: 280px;
+   
+    margin-top: 500px;
+    
+    width: 650px;
+    height: 180px;
   }
 }

@@ -9,7 +9,6 @@ import { City, WeatherInfos } from 'src/interfaces/interfaces_custom';
 })
 export class ReservationComponent implements OnInit {
   cities: City[] = [];
-
   selectedCity!: City;
   updatedCity!: City;
   constructor(private weatherService: WeatherService) {}
@@ -22,6 +21,7 @@ export class ReservationComponent implements OnInit {
       this.updatedCity = { ...this.selectedCity };
     }
   }
+  
   planeUrl: string =
     'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/f18518988e93d1928a12814495e700ed15493023/src/app/images/plane.jpg';
   description: string = ' This is plane';

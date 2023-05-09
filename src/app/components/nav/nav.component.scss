@@ -30,18 +30,16 @@
     -ms-transform: rotate(30deg);
     transform: rotate(30deg);
   }
-  &__temp{
+  &__temp {
     position: absolute;
     color: white;
     font-size: 12px;
-
   }
-  &__data{
+  &__data {
     margin-top: 30px;
     position: absolute;
     color: white;
     font-size: 12px;
-
   }
 }
 
@@ -74,26 +72,21 @@
       margin-right: 10px;
       margin-left: 1px;
     }
-    &__temp{
+    &__temp {
       margin-top: 80px;
       position: absolute;
       color: black;
       font-size: 16px;
-      
     }
-    &__data{
+    &__data {
       margin-top: 105px;
       position: absolute;
       color: black;
       font-size: 16px;
-  
     }
-    
   }
   .button {
     margin-left: 10px;
     margin-right: 10px;
   }
-  
-  
 }

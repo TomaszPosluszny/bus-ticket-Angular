@@ -7,7 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 
-import { NgForm } from '@angular/forms';
+import {NgForm, ValidatorFn} from '@angular/forms';
 
 @Component({
   selector: 'app-choice',
@@ -33,8 +33,14 @@ export class ChoiceComponent implements OnInit {
 
 
   constructor() {}
-
+  origin:string=""
+  name:string=""
+ 
   ngOnInit() {}
+  onSubmit(form: NgForm) {
+    if (form.valid) {
+      console.log(form.value);
+    }}
 
-
+    
 }

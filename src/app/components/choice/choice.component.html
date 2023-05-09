@@ -1,23 +1,23 @@
 <p>Choice</p>
 
 
+<div>
+  <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
 
-  <form #addUserForm="ngForm" (submit)="addCustomer(addUserForm)">
-
-    <label for="firstName"> Podaj imię </label>
-    <input type="text" [(ngModel)]="firstName" name="firstName" required minlength="10" maxlength="20"> 
-  
+    <div *ngIf="nameCtrl.hasError('required')">Departure place</div>
+    <input placeholder="name" [(ngModel)]="name" name="name" required  #nameCtrl="ngModel"> 
+ 
+ 
     <br><br> 
   
     <label for="firstName"> Zatrudnienie </label>
     <input type="checkbox" [(ngModel)]="employment" name="employment" checked required> 
   
     <br><br> 
-  
-    <select [(ngModel)]="hobbies" name="hobbies" required>
-        <option value="" disabled>Wybierz coś</option>
-        <option value="football">Piłka nożna</option>
-        <option value="volleyball">Siaktówka</option>
+    <div *ngIf="originPlace.hasError('required')">Departure place</div>
+    <select placeholder="name" [(ngModel)]="origin" name="Origin" required  #originPlace="ngModel">
+        <option value="" disabled>Orgin</option>
+        <option value="football">Wrocław</option>
     </select>
   
     <br><br> 
@@ -26,10 +26,9 @@
   
     <br><br> 
   
-    <button type="submit" [disabled]="!addUserForm.valid" > Dodaj</button>
-  
+    
+    <button class="button" type="submit" routerLink="/place"  [disabled]="!myForm.valid"  > Accept</button>
   </form>
-  
-  {{desc}}
-    {{ addUserForm.value | json}}
+</div>
+
     
