@@ -41,6 +41,17 @@
     color: white;
     font-size: 12px;
   }
+  &__login {
+    position: absolute;
+    margin-top: 450px;
+    width: 500px;
+    height: 50px;
+    font-family: "Raleway", sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: 1px solid green;
+  }
 }
 
 .button {
