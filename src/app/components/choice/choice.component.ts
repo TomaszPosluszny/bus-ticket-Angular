@@ -8,6 +8,9 @@ import {
 } from '@angular/forms';
 
 import {NgForm, ValidatorFn} from '@angular/forms';
+import { WeatherService } from 'src/app/services/weather.service';
+import { City, WeatherInfos } from 'src/interfaces/interfaces_custom';
+
 
 @Component({
   selector: 'app-choice',
@@ -32,15 +35,26 @@ export class ChoiceComponent implements OnInit {
 
 
 
-  constructor() {}
   origin:string=""
   name:string=""
- 
-  ngOnInit() {}
-  onSubmit(form: NgForm) {
-    if (form.valid) {
-      console.log(form.value);
-    }}
+  cities: City[] = [];
+  selectedCity!: City;
+  updatedCity!: City;
+  constructor(private weatherService: WeatherService) {}
+
+  ngOnInit(): void {
+    this.weatherService.getCities$.subscribe((res) => this.cities.push(...res));
+  }
+  update() {
+    if (this.selectedCity) {
+      this.updatedCity = { ...this.selectedCity };
+    }
+  }
+  // ngOnInit() {}
+  // onSubmit(form: NgForm) {
+  //   if (form.valid) {
+  //     console.log(form.value);
+  //   }}
 
     
 }

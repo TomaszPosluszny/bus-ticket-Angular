@@ -10,28 +10,6 @@
 
 
 <app-choice class="choice"></app-choice>
+<app-places class="places"></app-places>
 >=</div>
-<div class="widget">
 
-	<h3 class="widget__title">Weather</h3>
-
-	<div class="widget__select-wrapper">
-
-		<select [(ngModel)]="selectedCity"
-            class="widget__select"
-    >
-      <option [ngValue]="null">Select city...</option>
-      <option *ngFor="let city of cities"
-              [ngValue]="city"
-      >
-        {{city.name}}
-      </option>
-
-    </select>
-
-
-		<button (click)="update()" class="widget__submit">Update</button>
-
-	</div>
-<app-summery [city]="updatedCity"></app-summery>
-</div>

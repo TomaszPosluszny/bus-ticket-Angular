@@ -41,6 +41,9 @@ export class NavComponent implements OnInit {
 
   descriptionLogo: string = ' This is plane';
 
+  arrowUrl: string = 'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/master/src/app/components/images/arrow.png'
+
+  descriptionArrow: string = ' This is arrow';
   visible: boolean = false;
 
   onclick() {

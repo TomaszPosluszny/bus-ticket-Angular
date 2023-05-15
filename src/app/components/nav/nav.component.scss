@@ -30,6 +30,14 @@
     -ms-transform: rotate(30deg);
     transform: rotate(30deg);
   }
+  &__arrow {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-left: 27px;
+    margin-top: 5px;
+   
+  }
   &__temp {
     position: absolute;
     color: white;
@@ -43,7 +51,7 @@
   }
   &__login {
     position: absolute;
-    margin-top: 450px;
+    margin-top: 350px;
     width: 500px;
     height: 50px;
     font-family: "Raleway", sans-serif;

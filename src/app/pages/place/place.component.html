@@ -1,1 +1,8 @@
 <app-nav class="nav"></app-nav>
+<app-summery [city]="updatedCity"></app-summery>
+<div (mouseenter)="isHovered = true" (mouseleave)="isHovered = false">
+    <p>Show code on hover</p>
+    <div *ngIf="isHovered">
+      <pre><code>const message = 'Hello, World!';</code></pre>
+    </div>
+  </div>

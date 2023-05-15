@@ -8,18 +8,16 @@ import { City, WeatherInfos } from 'src/interfaces/interfaces_custom';
   styleUrls: ['./reservation.component.scss'],
 })
 export class ReservationComponent implements OnInit {
-  cities: City[] = [];
-  selectedCity!: City;
-  updatedCity!: City;
+  
   constructor(private weatherService: WeatherService) {}
 
   ngOnInit(): void {
-    this.weatherService.getCities$.subscribe((res) => this.cities.push(...res));
-  }
-  update() {
-    if (this.selectedCity) {
-      this.updatedCity = { ...this.selectedCity };
-    }
+  //   this.weatherService.getCities$.subscribe((res) => this.cities.push(...res));
+  // }
+  // update() {
+  //   if (this.selectedCity) {
+  //     this.updatedCity = { ...this.selectedCity };
+  //   }
   }
   
   planeUrl: string =

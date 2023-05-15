@@ -8,10 +8,11 @@
     <div (click)="onclick()" type="button" class="button">Login</div>
     <ng-container  *ngIf="visible">
       <div class=" nav__login" >
-         
+        
           <p>
             Fill out the form before logging in
           </p>
+          <img class="nav__arrow" [src]="arrowUrl" [alt]="descriptionArrow"/>
       </div>
   </ng-container>
   </div>
