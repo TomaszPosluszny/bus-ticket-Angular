@@ -7,10 +7,9 @@ import {
   Validators,
 } from '@angular/forms';
 
-import {NgForm, ValidatorFn} from '@angular/forms';
+import { NgForm, ValidatorFn } from '@angular/forms';
 import { WeatherService } from 'src/app/services/weather.service';
 import { City, WeatherInfos } from 'src/interfaces/interfaces_custom';
-
 
 @Component({
   selector: 'app-choice',
@@ -18,28 +17,25 @@ import { City, WeatherInfos } from 'src/interfaces/interfaces_custom';
   styleUrls: ['./choice.component.scss'],
 })
 export class ChoiceComponent implements OnInit {
-  firstName:string = '';
-  employment:boolean = false; 
-  hobbies:string = '';
-  desc:string = '';
+  firstName: string = '';
+  employment: boolean = false;
+  hobbies: string = '';
+  desc: string = '';
 
-  addCustomer(formValue:NgForm){
-    console.log(formValue.value)
-    console.log(formValue.valid)
+  addCustomer(formValue: NgForm) {
+    console.log(formValue.value);
+    console.log(formValue.valid);
   }
 
-
-
-
-
-
-
-
-  origin:string=""
-  name:string=""
+  origin: string = '';
+  departure: string ='';
+  passengers: string ='';
+  date:string ='';
+  name: string = '';
   cities: City[] = [];
   selectedCity!: City;
   updatedCity!: City;
+  isHovered:any
   constructor(private weatherService: WeatherService) {}
 
   ngOnInit(): void {
@@ -55,6 +51,4 @@ export class ChoiceComponent implements OnInit {
   //   if (form.valid) {
   //     console.log(form.value);
   //   }}
-
-    
 }
