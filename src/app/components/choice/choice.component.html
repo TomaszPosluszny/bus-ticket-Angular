@@ -1,23 +1,23 @@
 <div>
-  <div class="form__temp"><div (mouseenter)="isHovered = true" (mouseleave)="isHovered = false">
-    <div class="form__check"><p>Check the current temperature before departure</p></div>
+  <div class="form__temp"><div class="form__check" (mouseenter)="isHovered = true" (mouseleave)="isHovered = false">
+    <p>Check temperature in cites</p>
     <div  class="widget" *ngIf="isHovered">
       <div class="widget__select">
         <div>
-        <div class="widget__error" *ngIf="originPlacee.hasError('required')">Departure place</div>
-        <select class="form__input"
+          <div class="widget__txt">Check temperature 
+        <select class="widget__city"
           placeholder="name"
           [(ngModel)]="selectedCity"
-          name="Origin"
+          name="city"
           required
-          #originPlacee="ngModel"
-          class="widget__select"
-        >
-          <!-- <option [ngValue]="null">Select city...</option> -->
+          #cityPlace="ngModel"
+          
+        > 
+          
           <option  *ngFor="let city of cities" [ngValue]="city">
             {{ city.name }}
           </option>
-        </select>
+        </select></div>
         <p >
           <button  class="widget__button" (click)="update()" >Check</button>
      
@@ -39,7 +39,7 @@
           #originPlace="ngModel"
         >
           <option value="" disabled>Choice</option>
-          <option value="football">Wrocław</option>
+          <option value="Wrocław">Wrocław</option>
         </select>
       </div>
       <br /><br />
@@ -53,9 +53,10 @@
           #departurePlace="ngModel"
         >
           <option value="" disabled>Choice</option>
-          <option value="football">Warsaw</option>
-          <option value="football">London</option>
-          <option value="football">Nowy York</option>
+          <option value="Warsaw">Warsaw</option>
+          <option value="Londyn">London</option>
+          <option value="New York">New York</option>
+          
         </select>
       </div>
     </div>
@@ -81,9 +82,9 @@
           #passengersPlace="ngModel"
         >
           <option value="" disabled>Choice</option>
-          <option value="football">1</option>
-          <option value="football">2</option>
-          <option value="football">3</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
         </select>
       </div>
     </div>

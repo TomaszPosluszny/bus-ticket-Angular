@@ -1,0 +1,21 @@
+<p>summation works!</p>
+{{tempCites()}}°C
+{{cityWarsaw()}}°C
+
+<select [(ngModel)]="myValue">
+    <option>1</option>  
+    <option>2</option>  
+    <option>3</option>  
+  </select>
+
+<div *ngIf="myValue === '2'">
+  
+    {{tempCites()}}°C
+  
+</div>
+<div *ngIf="myValue === '1'">
+  
+    {{cityWarsaw()}}°C
+  
+</div>
+{{myValue}}

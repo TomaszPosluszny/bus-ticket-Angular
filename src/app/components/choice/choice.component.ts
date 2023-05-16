@@ -11,6 +11,7 @@ import { NgForm, ValidatorFn } from '@angular/forms';
 import { WeatherService } from 'src/app/services/weather.service';
 import { City, WeatherInfos } from 'src/interfaces/interfaces_custom';
 
+
 @Component({
   selector: 'app-choice',
   templateUrl: './choice.component.html',

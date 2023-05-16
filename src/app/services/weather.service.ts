@@ -15,7 +15,9 @@ export class WeatherService {
   constructor(private http: HttpClient) {}
 
   nameCity:string = ''
-
+  nameLondon:string = ''
+  nameNewYork:string = ''
+  nameWarsaw:string = ''
   getCities$: Observable<City[]> = this.http
     .get<City[]>("/assets/cities.json")
     .pipe(
@@ -38,12 +40,15 @@ export class WeatherService {
       getCity() {
         return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.nameCity}&appid=f9fe3ecd6dcb482c2724f8261001d8e4`);
       }
+      cityWarsaw() {
+        return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.nameWarsaw}&appid=f9fe3ecd6dcb482c2724f8261001d8e4`);
+      }
+      cityNewYork() {
+        return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.nameNewYork}&appid=f9fe3ecd6dcb482c2724f8261001d8e4`);
+      }
+      cityLondon() {
+        return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.nameLondon}&appid=f9fe3ecd6dcb482c2724f8261001d8e4`);
+      }
 }
 
  
-//  tomek:string = ''
-
-//   constructor(private http:HttpClient,  ) { }
-//   getCity() {
-//     return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.tomek}&appid=f9fe3ecd6dcb482c2724f8261001d8e4`);
-//   }

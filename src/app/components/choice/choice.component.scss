@@ -7,7 +7,7 @@
   text-transform: uppercase;
   background-color: green;
   color: white;
-  
+
   width: 100px;
   height: 30px;
   border: 1px solid black;
@@ -29,9 +29,10 @@
     margin-top: 5px;
   }
   &__check {
-    display: flex;
-    justify-content: center;
-    width: 400px;
+    // display: flex;
+    // justify-content: flex-end;
+    margin-left: 220px;
+    width: 190px;
     height: 10px;
     font-size: 16px;
     font-weight: 700;
@@ -57,7 +58,7 @@
   height: 100px;
   width: 300px;
   background-color: black;
-  margin-left: 50px;
+  margin-top: -110px;
   border: 1px solid green;
   &__select {
     margin: 5px;
@@ -73,14 +74,12 @@
   &__button {
     display: flex;
     justify-content: center;
-
     align-items: center;
     position: absolute;
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
     background-color: black;
     color: white;
-
     width: 100px;
     height: 30px;
     border: 1px solid green;
@@ -90,5 +89,17 @@
   &__button:hover {
     background-color: green;
     color: white;
+  }
+  &__txt {
+    color: white;
+  }
+  &__city {
+    color: white;
+    background-color: black;
+    width: 20px;
+    padding: 3px;
+    font-size: 12px;
+    border: 1px solid green;
+    border-radius: 3px;
   }
 }
