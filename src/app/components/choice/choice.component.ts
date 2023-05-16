@@ -51,4 +51,6 @@ export class ChoiceComponent implements OnInit {
   //   if (form.valid) {
   //     console.log(form.value);
   //   }}
+
+  
 }

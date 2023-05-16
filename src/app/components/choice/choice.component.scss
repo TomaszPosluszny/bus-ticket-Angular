@@ -5,16 +5,17 @@
   position: absolute;
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
-  background-color: black;
+  background-color: green;
   color: white;
+  
   width: 100px;
   height: 30px;
-  border: 1px solid green;
+  border: 1px solid black;
   box-shadow: 0 2px 50px gray;
   cursor: pointer;
 }
 .button:hover {
-  background-color: green;
+  background-color: black;
   color: white;
 }
 
@@ -26,5 +27,68 @@
     display: flex;
     justify-content: space-evenly;
     margin-top: 5px;
+  }
+  &__check {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+  &__error {
+    color: red;
+    margin-left: 2px;
+  }
+  &__input {
+    color: white;
+    background-color: black;
+    width: 100%;
+    padding: 3px;
+    font-size: 13px;
+    border: 1px solid green;
+    border-radius: 3px;
+  }
+}
+
+.widget {
+  position: absolute;
+  height: 100px;
+  width: 300px;
+  background-color: black;
+  margin-left: 50px;
+  border: 1px solid green;
+  &__select {
+    margin: 5px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  &__error {
+    color: red;
+  }
+  &__temp {
+    color: white;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    position: absolute;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+
+    width: 100px;
+    height: 30px;
+    border: 1px solid green;
+    box-shadow: 0 2px 50px gray;
+    cursor: pointer;
+  }
+  &__button:hover {
+    background-color: green;
+    color: white;
   }
 }
