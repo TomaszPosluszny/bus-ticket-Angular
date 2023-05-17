@@ -19,3 +19,30 @@
   
 </div>
 {{myValue}}
+<p>
+    Origin: {{newOrigin}}
+</p>
+
+<p>
+    Departure: {{ newDeparture}}
+    </p>
+    <div *ngIf="newDeparture === 'Warsaw'">
+  
+        {{cityWarsaw()}}°C
+      
+    </div>
+    <div *ngIf="newDeparture === 'London'">
+  
+        {{cityLondon()}}°C
+      
+    </div>
+    <div *ngIf="newDeparture === 'New York'">
+  
+        {{cityNewYork()}}°C
+      
+    </div>
+    
+    <p>
+        Date: {{ newDate}}
+        </p>
+        <p>  Passengerse: {{ newPassengerse}}</p>

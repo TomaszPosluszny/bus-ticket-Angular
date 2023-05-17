@@ -38,4 +38,10 @@
     
     <p>A tutaj jest to, co wpisałem {{ pokazNaEkranie}} </p>
     
-    
+   <br><br><br> <form #myForm="ngForm" (submit)="onSubmit(myForm)">
+    <input type="text" name="name" [(ngModel)]="formData.name" #nameInput="ngModel" required>
+    <button type="submit">Submit</button>
+  </form>
+
+
+  <br><br><br><input [(ngModel)]="newUser"/> <button (click)="editedUser();">Change</button>

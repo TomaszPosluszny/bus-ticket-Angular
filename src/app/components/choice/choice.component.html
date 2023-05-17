@@ -54,7 +54,7 @@
         >
           <option value="" disabled>Choice</option>
           <option value="Warsaw">Warsaw</option>
-          <option value="Londyn">London</option>
+          <option value="London">London</option>
           <option value="New York">New York</option>
           
         </select>
@@ -92,12 +92,14 @@
   <div class="form"><button
     class="button"
     type="submit"
-    (click)="update()"
+    (click)="sendForm()"
     [disabled]="!myForm.valid"
     routerLink="/place"
+    
   >
     Accept
   </button></div>
   <br>
-  
+<!--  -->
 </div>
+<!-- <app-place></app-place> -->

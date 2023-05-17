@@ -10,6 +10,7 @@ import {
 import { NgForm, ValidatorFn } from '@angular/forms';
 import { WeatherService } from 'src/app/services/weather.service';
 import { City, WeatherInfos } from 'src/interfaces/interfaces_custom';
+import { DataService } from 'src/app/services/data.service';
 
 
 @Component({
@@ -29,6 +30,7 @@ export class ChoiceComponent implements OnInit {
   }
 
   origin: string = '';
+  origin1: string = '';
   departure: string ='';
   passengers: string ='';
   date:string ='';
@@ -37,7 +39,7 @@ export class ChoiceComponent implements OnInit {
   selectedCity!: City;
   updatedCity!: City;
   isHovered:any
-  constructor(private weatherService: WeatherService) {}
+  constructor(private weatherService: WeatherService, private dataService:DataService) {}
 
   ngOnInit(): void {
     this.weatherService.getCities$.subscribe((res) => this.cities.push(...res));
@@ -47,11 +49,12 @@ export class ChoiceComponent implements OnInit {
       this.updatedCity = { ...this.selectedCity };
     }
   }
-  // ngOnInit() {}
-  // onSubmit(form: NgForm) {
-  //   if (form.valid) {
-  //     console.log(form.value);
-  //   }}
+  sendForm() {
+    this.dataService.editOrigin(this.origin);
+    this.dataService.editDeparture(this.departure);
+    this.dataService.editDate(this.date);
+    this.dataService.editPassengerse(this.passengers);
+  }
 
   
 }

@@ -9,9 +9,23 @@
   <app-login></app-login>
   <app-summation></app-summation>
   
-    <input [(ngModel)] = data>
    
 
-    {{data}}
-    <input [(ngModel)]="myValue">
-    <button (click)="saveValue()">Zapisz wartość</button>
+   <br><br><br><p>
+    two: {{user}}
+    </p>
+
+    <div *ngIf="user=== '2'">
+  
+        <p>Wyświetlamy div {{ user}}.</p>
+        <!-- tutaj wstaw kod, który chcesz wyświetlić -->
+      
+    </div>
+    <div *ngIf="user=== '1'">
+      
+        <p>Wyświetlamy div {{ user}}.</p>
+        <!-- tutaj wstaw kod, który chcesz wyświetlić -->
+      
+    </div>
+
+    
