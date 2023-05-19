@@ -57,4 +57,10 @@ export class DataService {
   editPassengerse(passengerse:any) {
     this.newPassengerse.next(passengerse);
   }
+  private newLogin = new BehaviorSubject<string>('');
+  castLogin = this.newLogin.asObservable();
+
+  editLogin(login:any) {
+    this.newLogin.next(login);
+  }
 }

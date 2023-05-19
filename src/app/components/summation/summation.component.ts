@@ -40,9 +40,9 @@ export class SummationComponent implements OnInit {
   cityNewYork() {
     return Math.round(this.newyorkTemp.main?.temp - this.kalwinTemp);
   }
-
+  
   ngOnInit(): void {
-    this.dataService.castUser.subscribe(user => (this.user = user));
+    
     this.dataService. castOrigin.subscribe(newOrigin => (this. newOrigin = newOrigin));
     this.dataService. castDeparture.subscribe(newDeparture => (this. newDeparture= newDeparture));
     this.dataService. castDate.subscribe(newDate => (this. newDate= newDate));

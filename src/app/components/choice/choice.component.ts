@@ -12,34 +12,26 @@ import { WeatherService } from 'src/app/services/weather.service';
 import { City, WeatherInfos } from 'src/interfaces/interfaces_custom';
 import { DataService } from 'src/app/services/data.service';
 
-
 @Component({
   selector: 'app-choice',
   templateUrl: './choice.component.html',
   styleUrls: ['./choice.component.scss'],
 })
 export class ChoiceComponent implements OnInit {
-  firstName: string = '';
-  employment: boolean = false;
-  hobbies: string = '';
-  desc: string = '';
-
-  addCustomer(formValue: NgForm) {
-    console.log(formValue.value);
-    console.log(formValue.valid);
-  }
-
   origin: string = '';
   origin1: string = '';
-  departure: string ='';
-  passengers: string ='';
-  date:string ='';
+  departure: string = '';
+  passengers: string = '';
+  date: string = '';
   name: string = '';
   cities: City[] = [];
   selectedCity!: City;
   updatedCity!: City;
-  isHovered:any
-  constructor(private weatherService: WeatherService, private dataService:DataService) {}
+  isHovered: any;
+  constructor(
+    private weatherService: WeatherService,
+    private dataService: DataService
+  ) {}
 
   ngOnInit(): void {
     this.weatherService.getCities$.subscribe((res) => this.cities.push(...res));
@@ -61,5 +53,4 @@ export class ChoiceComponent implements OnInit {
   onclick() {
     this.visible = !this.visible;
   }
-  
 }

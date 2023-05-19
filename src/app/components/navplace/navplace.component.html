@@ -1,0 +1,10 @@
+
+<div class="nav">
+    <span class="nav__logo"
+      ><p class="nav__txt">maStar</p>
+      <a routerLink="/"><img class="nav__image" [src]="logoUrl" [alt]="descriptionLogo"
+    /></a></span>
+    <p class="nav__temp">{{nameCites()}} {{tempCites()}}°C </p><p class="nav__data">{{ today | date:'dd/MM/yyyy HH:mm:ss'}}</p>
+    <p class="nav__name"> Witaj {{newLogin}} !</p>
+ 
+  </div>
