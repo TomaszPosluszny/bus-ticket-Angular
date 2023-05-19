@@ -1,37 +1,57 @@
-<div>
-  <div class="form__temp"><div class="form__check" (mouseenter)="isHovered = true" (mouseleave)="isHovered = false">
-    <p>Check temperature in cites</p>
-    <div  class="widget" *ngIf="isHovered">
-      <div class="widget__select">
-        <div>
-          <div class="widget__txt">Check temperature 
-        <select class="widget__city"
-          placeholder="name"
-          [(ngModel)]="selectedCity"
-          name="city"
-          required
-          #cityPlace="ngModel"
-          
-        > 
-          
-          <option  *ngFor="let city of cities" [ngValue]="city">
-            {{ city.name }}
-          </option>
-        </select></div>
-        <p >
-          <button  class="widget__button" (click)="update()" >Check</button>
-     
-    </p></div>
-    <app-summery class="widget__temp" [city]="updatedCity"></app-summery>
-      </div>
-    </div></div>
+
+<ng-container  *ngIf="visible">
+  <div class="form__login" >
+    
+    <p><app-login></app-login>
+        
+      </p>
+      
   </div>
-  
-  <form #myForm="ngForm" >
+</ng-container><div>
+  <div class="form__temp">
+    <div
+      class="form__check"
+      (mouseenter)="isHovered = true"
+      (mouseleave)="isHovered = false"
+    >
+      <p>Check temperature in cites</p>
+      <div class="widget" *ngIf="isHovered">
+        <div class="widget__select">
+          <div>
+            <div class="widget__txt">
+              Check temperature
+              <select
+                class="widget__city"
+                placeholder="name"
+                [(ngModel)]="selectedCity"
+                name="city"
+                required
+                #cityPlace="ngModel"
+              >
+                <option *ngFor="let city of cities" [ngValue]="city">
+                  {{ city.name }}
+                </option>
+              </select>
+            </div>
+            <p>
+              <button class="widget__button" (click)="update()">Check</button>
+            </p>
+          </div>
+          <app-summery class="widget__temp" [city]="updatedCity"></app-summery>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <form #myForm="ngForm">
+    
     <div class="form">
       <div>
-        <div class="form__error" *ngIf="originPlace.hasError('required')">Origin</div>
-        <select class="form__input"
+        <div class="form__error" *ngIf="originPlace.hasError('required')">
+          Origin
+        </div>
+        <select
+          class="form__input"
           placeholder="name"
           [(ngModel)]="origin"
           name="origin"
@@ -44,8 +64,11 @@
       </div>
       <br /><br />
       <div>
-        <div class="form__error" *ngIf="departurePlace.hasError('required')">Departure</div>
-        <select class="form__input"
+        <div class="form__error" *ngIf="departurePlace.hasError('required')">
+          Departure
+        </div>
+        <select
+          class="form__input"
           placeholder="name"
           [(ngModel)]="departure"
           name="departure"
@@ -56,14 +79,17 @@
           <option value="Warsaw">Warsaw</option>
           <option value="London">London</option>
           <option value="New York">New York</option>
-          
         </select>
       </div>
     </div>
     <div class="form">
       <div>
-        <div class="form__error" *ngIf="datePlace.hasError('required')">Date</div>
-        <input class="form__input"
+      
+        <div class="form__error" *ngIf="datePlace.hasError('required')">
+          Date
+        </div>
+        <input
+          class="form__input"
           type="date"
           placeholder="name"
           [(ngModel)]="date"
@@ -73,8 +99,11 @@
         />
       </div>
       <div>
-        <div class="form__error" *ngIf="passengersPlace.hasError('required')">Passengers</div>
-        <select class="form__input"
+        <div class="form__error" *ngIf="passengersPlace.hasError('required')">
+          Passengers
+        </div>
+        <select
+          class="form__input"
           placeholder="name"
           [(ngModel)]="passengers"
           name="passengers"
@@ -89,17 +118,28 @@
       </div>
     </div>
   </form>
-  <div class="form"><button
-    class="button"
-    type="submit"
-    (click)="sendForm()"
-    [disabled]="!myForm.valid"
-    routerLink="/place"
-    
-  >
-    Accept
-  </button></div>
-  <br>
-<!--  -->
+  <div class="form">
+    <button
+      class="button"
+      type="submit"
+      (click)="sendForm()"
+      (click)="onclick() "
+      [disabled]="!myForm.valid"
+  
+    >
+      Accept
+    </button>
+  </div>
+  <br />
+  <!--  -->
 </div>
 <!-- <app-place></app-place> -->
+<ng-container  *ngIf="visible">
+  <div class=" nav__login" >
+    
+    <p>
+        Fill out the form before logging in 
+      </p>
+      
+  </div>
+</ng-container>

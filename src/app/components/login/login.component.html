@@ -1,47 +1,6 @@
-<p>login works!</p>
-<select [(ngModel)]="origin">
-    <option  *ngFor="let item of myData">{{ item.name }}</option>
-  </select>
+<p>log in</p>
+<select class="login" [(ngModel)]="origin">
+  <option *ngFor="let item of myData">{{ item.name }}</option>
+</select>
 
-  {{origin}}
-
-  <div *ngIf="origin === 'Agnieszka'">
-    <p>Wyświetlamy kod, ponieważ wartość ngModel to "Agnieszka".</p>
-    <!-- tutaj wstaw kod, który chcesz wyświetlić -->
-  </div>
-  <div *ngIf="origin === 'Tomek'">
-    <p>Wyświetlamy kod, ponieważ wartość ngModel to "Tomek".</p>
-    <!-- tutaj wstaw kod, który chcesz wyświetlić -->
-  </div>
-<br>
-  <input [(ngModel)]="myValue">
-
- 
-
-<div *ngIf="pokazNaEkranie=== '2'">
-  
-    <p>Wyświetlamy div {{ pokazNaEkranie}}.</p>
-    <!-- tutaj wstaw kod, który chcesz wyświetlić -->
-  
-</div>
-<div *ngIf="pokazNaEkranie=== '1'">
-  
-    <p>Wyświetlamy div {{ pokazNaEkranie}}.</p>
-    <!-- tutaj wstaw kod, który chcesz wyświetlić -->
-  
-</div>
-{{myValue}}
-
-<p (click)="sample()">
-    Kliknij, aby wywołać w konsoli
-    </p>
-    
-    <p>A tutaj jest to, co wpisałem {{ pokazNaEkranie}} </p>
-    
-   <br><br><br> <form #myForm="ngForm" (submit)="onSubmit(myForm)">
-    <input type="text" name="name" [(ngModel)]="formData.name" #nameInput="ngModel" required>
-    <button type="submit">Submit</button>
-  </form>
-
-
-  <br><br><br><input [(ngModel)]="newUser"/> <button (click)="editedUser();">Change</button>
+<div><button routerLink="/place" class="button">Login</button></div>

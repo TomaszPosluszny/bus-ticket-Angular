@@ -56,5 +56,10 @@ export class ChoiceComponent implements OnInit {
     this.dataService.editPassengerse(this.passengers);
   }
 
+  visible: boolean = false;
+
+  onclick() {
+    this.visible = !this.visible;
+  }
   
 }

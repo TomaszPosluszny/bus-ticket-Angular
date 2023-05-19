@@ -6,36 +6,21 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-
-  constructor(private http: HttpClient, private dataService:DataService) { }
-  origin:string = ''
+  constructor(private http: HttpClient, private dataService: DataService) {}
+  origin: string = '';
   myData: any;
-  myValue:any
-  formData: any = {};
-  
  
+
+  ngOnInit() {
+    this.getData().subscribe((data) => {
+      this.myData = data;
+    });
+  }
+
   getData() {
     return this.http.get('assets/login.json');
-  }
-  pokazNaEkranie: any;
-  sample(){
-    console.log(this.dataService.sharedData )
-    this.pokazNaEkranie = this.dataService.sharedData
-    }
-    onSubmit(form: NgForm) {
-      if (form.valid) {
-        this.dataService.saveData(this.formData);
-      }
-    }
-
-     name = 'Angular';
-  newUser: string=""
-  ngOnInit() {}
-
-  editedUser() {
-    this.dataService.editUser(this.newUser);
   }
 }

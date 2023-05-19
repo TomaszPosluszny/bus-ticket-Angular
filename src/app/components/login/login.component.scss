@@ -1,0 +1,26 @@
+.login {
+  color: white;
+  background-color: black;
+  width: 90px;
+  padding: 3px;
+  font-size: 12px;
+  border: 1px solid green;
+  border-radius: 3px;
+}
+.button {
+   
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    margin-top: 40px;
+    background-color: green;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+    box-shadow: 0 2px 50px gray;
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: black;
+    color: white;
+  }
