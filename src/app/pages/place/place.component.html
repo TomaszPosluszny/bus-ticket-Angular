@@ -1,32 +1,9 @@
 <app-navplace class="nav"></app-navplace>
+<app-places class="plane"></app-places>
+<app-summation class="summation"></app-summation>
+<div class="place">
+  <img class="place__image" [src]="choiceUrl" [alt]="description" />
+</div>
 
-<app-summery [city]="updatedCity"></app-summery>
-<div (mouseenter)="isHovered = true" (mouseleave)="isHovered = false">
-    <p>Show code on hover</p>
-    <div *ngIf="isHovered">
-      <pre><code>const message = 'Hello, World!';</code></pre>
-    </div>
-  </div>
-  <app-login></app-login>
-  <app-summation></app-summation>
-  
-   
-
-   <br><br><br><p>
-    two: {{user}}
-    </p>
-
-    <div *ngIf="user=== '2'">
-  
-        <p>Wyświetlamy div {{ user}}.</p>
-        <!-- tutaj wstaw kod, który chcesz wyświetlić -->
-      
-    </div>
-    <div *ngIf="user=== '1'">
-      
-        <p>Wyświetlamy div {{ user}}.</p>
-        <!-- tutaj wstaw kod, który chcesz wyświetlić -->
-      
-    </div>
-
-    
+<app-login></app-login>
+<app-summation></app-summation>

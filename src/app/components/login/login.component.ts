@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DataService } from 'src/app/services/data.service';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,7 +13,6 @@ export class LoginComponent implements OnInit {
   myData: any;
   sendForm() {
     this.dataService.editLogin(this.login);
-  
   }
 
   ngOnInit() {

@@ -1,13 +1,9 @@
-
-<ng-container  *ngIf="visible">
-  <div class="form__login" >
-    
-    <p><app-login></app-login>
-        
-      </p>
-      
+<ng-container *ngIf="visible">
+  <div class="form__login">
+    <p><app-login></app-login></p>
   </div>
-</ng-container><div>
+</ng-container>
+<div>
   <div class="form__temp">
     <div
       class="form__check"
@@ -42,9 +38,8 @@
       </div>
     </div>
   </div>
- 
+
   <form #myForm="ngForm">
-    
     <div class="form">
       <div>
         <div class="form__error" *ngIf="originPlace.hasError('required')">
@@ -84,7 +79,6 @@
     </div>
     <div class="form">
       <div>
-      
         <div class="form__error" *ngIf="datePlace.hasError('required')">
           Date
         </div>
@@ -111,7 +105,7 @@
           #passengersPlace="ngModel"
         >
           <option value="" disabled>Choice</option>
-          <option >1</option>
+          <option>1</option>
           <option value="2">2</option>
           <option value="3">3</option>
         </select>
@@ -123,9 +117,8 @@
       class="button"
       type="submit"
       (click)="sendForm()"
-      (click)="onclick() "
+      (click)="onclick()"
       [disabled]="!myForm.valid"
-  
     >
       Accept
     </button>
@@ -134,12 +127,8 @@
   <!--  -->
 </div>
 <!-- <app-place></app-place> -->
-<ng-container  *ngIf="visible">
-  <div class=" nav__login" >
-    
-    <p>
-        Fill out the form before logging in 
-      </p>
-      
+<ng-container *ngIf="visible">
+  <div class="nav__login">
+    <p>Fill out the form before logging in</p>
   </div>
 </ng-container>

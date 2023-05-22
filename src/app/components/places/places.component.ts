@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-places',
@@ -7,36 +8,21 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./places.component.scss'],
 })
 export class PlacesComponent implements OnInit {
+  constructor( private dataService: DataService) {}
+  isHovered: any;
+  freeOne:any
+  freeTwo:any
+  freeThree:any
+  freeFour:any
+  freeFive:any
+  visible: boolean = false;
+  ticketBuisnesPl:number = 200 
+  ticketBuisnesEUR:number = 45 
+  ticketBuisnesUSD:number = 48 
+  exchange:any
+  newDeparture!:string;
 
-  public twoWayBinding = ''
-
-  PlacesForm = new FormGroup({
-    email: new FormControl('', {
-      validators: [
-        Validators.required,
-        Validators.email,
-        Validators.minLength(8),
-      ],
-    }),
-    password: new FormControl('', {
-      validators: [Validators.minLength(6)],
-    }),
-  });
-
-  zatwierdz() {
-    console.log(this.PlacesForm.value);
+  ngOnInit() {
+    this.dataService. castDeparture.subscribe(newDeparture => (this. newDeparture= newDeparture));
   }
-
-  constructor() {}
-
-  ngOnInit() {}
-
-  get email() {
-    return this.PlacesForm.controls['email'];
-  }
-  get password() {
-    return this.PlacesForm.controls['password'];
-  }
-
-  
 }

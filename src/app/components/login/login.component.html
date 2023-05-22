@@ -1,7 +1,9 @@
 <p>log in</p>
 <select class="login" [(ngModel)]="login">
-    <option  value="" disabled >name</option>
+  <option value="" disabled>name</option>
   <option *ngFor="let item of myData">{{ item.name }}</option>
 </select>
 
-<div><button routerLink="/place" class="button" (click)="sendForm()" >Login</button></div>
+<div>
+  <button routerLink="/place" class="button" (click)="sendForm()">Login</button>
+</div>

@@ -6,17 +6,20 @@ import { DataService } from 'src/app/services/data.service';
 @Component({
   selector: 'app-navplace',
   templateUrl: './navplace.component.html',
-  styleUrls: ['./navplace.component.scss']
+  styleUrls: ['./navplace.component.scss'],
 })
 export class NavplaceComponent implements OnInit {
-  constructor(private weatherService: WeatherService ,  private dataService: DataService) {}
+  constructor(
+    private weatherService: WeatherService,
+    private dataService: DataService
+  ) {}
 
   today: any = new Date();
   dataTemp: any = '';
   kalwinTemp: number = 273.15;
   start: any = 'Wrocław';
-  newLogin!:string
-  castLogin!:string
+  newLogin!: string;
+  castLogin!: string;
 
   nameCites() {
     return this.start;
@@ -32,13 +35,14 @@ export class NavplaceComponent implements OnInit {
     console.log(this.changedDate);
   }
   ngOnInit(): void {
-   
     this.weatherService.nameCity = 'Wrocław';
     this.weatherService.getCity().subscribe((data: any) => {
       this.dataTemp = data;
       console.log(this.dataTemp);
     });
-    this.dataService.castLogin.subscribe(newLogin => (this.newLogin = newLogin));
+    this.dataService.castLogin.subscribe(
+      (newLogin) => (this.newLogin = newLogin)
+    );
   }
 
   logoUrl: string =
@@ -46,7 +50,8 @@ export class NavplaceComponent implements OnInit {
 
   descriptionLogo: string = ' This is plane';
 
-  arrowUrl: string = 'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/master/src/app/components/images/arrow2.png'
+  arrowUrl: string =
+    'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/master/src/app/components/images/arrow2.png';
 
   descriptionArrow: string = ' This is arrow';
   visible: boolean = false;
@@ -55,5 +60,3 @@ export class NavplaceComponent implements OnInit {
     this.visible = !this.visible;
   }
 }
-
-
