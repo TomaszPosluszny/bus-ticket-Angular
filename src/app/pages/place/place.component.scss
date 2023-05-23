@@ -13,18 +13,29 @@
 .plane {
   position: absolute;
   width: 430px;
-  height: 190px;
+  height: 210px;
   background-color: white;
-  margin-left: 500px;
+  margin-left: 700px;
   margin-top: 30px;
   border-radius: 10px;
 }
 .summation {
   position: absolute;
-  width: 200px;
+  width: 280px;
   height:450px;
-  margin-left: 1000px;
+  margin-left: 250px;
   margin-top: 90px;
+  background-color: white;
+  border: 1px solid green;
+  border-radius: 4px;
+  box-shadow: 0 2px 50px gray;
+}
+.tickets{
+  position: absolute;
+  width: 200px;
+  height:350px;
+  margin-left: 230px;
+  margin-top: 200px;
   background-color: white;
   border: 1px solid green;
   border-radius: 4px;

@@ -39,38 +39,46 @@
     </div>
   </div>
 
-  <form #myForm="ngForm">
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm" novalidate>
     <div class="form">
       <div>
-        <div class="form__error" *ngIf="originPlace.hasError('required')">
-          Origin
+        <div
+          class="form__error"
+          *ngIf="myForm.submitted && myForm.controls['origin'].invalid"
+        >
+          Origin is required
         </div>
         <select
           class="form__input"
+          id="origin"
           placeholder="name"
           [(ngModel)]="origin"
           name="origin"
           required
           #originPlace="ngModel"
         >
-          <option value="" disabled>Choice</option>
+          <option value="" disabled>Origin</option>
           <option value="Wrocław">Wrocław</option>
         </select>
       </div>
       <br /><br />
       <div>
-        <div class="form__error" *ngIf="departurePlace.hasError('required')">
-          Departure
+        <div
+          class="form__error"
+          *ngIf="myForm.submitted && myForm.controls['departure'].invalid"
+        >
+          Departure is required
         </div>
         <select
           class="form__input"
+          id="departure"
           placeholder="name"
           [(ngModel)]="departure"
           name="departure"
           required
           #departurePlace="ngModel"
         >
-          <option value="" disabled>Choice</option>
+          <option value="" disabled>Departure</option>
           <option value="Warsaw">Warsaw</option>
           <option value="London">London</option>
           <option value="New York">New York</option>
@@ -79,11 +87,16 @@
     </div>
     <div class="form">
       <div>
-        <div class="form__error" *ngIf="datePlace.hasError('required')">
-          Date
+        <div
+          class="form__error"
+          *ngIf="myForm.submitted && myForm.controls['date'].invalid"
+        >
+          Date is required
         </div>
         <input
-          class="form__input"
+          class="form__input turn"
+          [min]="getCurrentDate()"
+          id="date"
           type="date"
           placeholder="name"
           [(ngModel)]="date"
@@ -93,42 +106,30 @@
         />
       </div>
       <div>
-        <div class="form__error" *ngIf="passengersPlace.hasError('required')">
-          Passengers
+        <div
+          class="form__error"
+          *ngIf="myForm.submitted && myForm.controls['passengers'].invalid"
+        >
+          Passengers is required
         </div>
         <select
           class="form__input"
+          id="passengers"
           placeholder="name"
           [(ngModel)]="passengers"
           name="passengers"
           required
           #passengersPlace="ngModel"
         >
-          <option value="" disabled>Choice</option>
+          <option value="" disabled>Passengers</option>
           <option>1</option>
           <option value="2">2</option>
           <option value="3">3</option>
         </select>
       </div>
     </div>
+    <button class="button" type="submit" (click)="sendForm()">Accept</button>
   </form>
-  <div class="form">
-    <button
-      class="button"
-      type="submit"
-      (click)="sendForm()"
-      (click)="onclick()"
-      [disabled]="!myForm.valid"
-    >
-      Accept
-    </button>
-  </div>
+  <div class="form"></div>
   <br />
-  <!--  -->
 </div>
-<!-- <app-place></app-place> -->
-<ng-container *ngIf="visible">
-  <div class="nav__login">
-    <p>Fill out the form before logging in</p>
-  </div>
-</ng-container>

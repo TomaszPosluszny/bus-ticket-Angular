@@ -44,4 +44,10 @@ export class DataService {
   editLogin(login: any) {
     this.newLogin.next(login);
   }
+  private newBag = new BehaviorSubject<string>('');
+  castBag = this.newBag.asObservable();
+
+  editBag(bag: any) {
+    this.newBag.next(bag);
+  }
 }

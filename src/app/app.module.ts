@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { SummationComponent } from './components/summation/summation.component';
 import { NavplaceComponent } from './components/navplace/navplace.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { NavplaceComponent } from './components/navplace/navplace.component';
     PlacesComponent,
     SummationComponent,
     NavplaceComponent,
+   
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule, FormsModule ],
   providers: [

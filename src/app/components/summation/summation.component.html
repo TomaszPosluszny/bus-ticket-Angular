@@ -1,3 +1,230 @@
+
+<div *ngIf="newPassengerse === '1'">
+<form (ngSubmit)="onSubmit()" #myForm="ngForm" novalidate>
+<div>
+  <div
+    *ngIf="myForm.submitted && myForm.controls['ticketOne'].invalid"
+    class="error-message"
+  >
+    Ticket One is required
+  </div>
+  <select
+    class="form__input"
+    placeholder="name"
+    [(ngModel)]="ticketOne"
+    id="ticketOne"
+    name="ticketOne"
+    required
+    #departurePlace="ngModel"
+  >
+    <option value="" disabled>Ticket</option>
+    <option value="400">B3</option>
+    <option value="200">E2</option>
+    <option value="200">E9</option>
+    <option value="400">B14</option>
+    <option value="200">E14</option>
+  </select>
+</div>
+<div
+  *ngIf="myForm.submitted && myForm.controls['bag'].invalid"
+  class="error-message"
+>
+  Bag is required
+</div>
+<select
+  class="form__input"
+  id="bag"
+  placeholder="name"
+  [(ngModel)]="bag"
+  name="bag"
+  required
+  #bagName="ngModel"
+>
+  <option value="" disabled>Bag</option>
+  <option value="50">Small</option>
+  <option value="80">Madium</option>
+  <option value="100">Big</option>
+</select>
+{{ bag }} zł
+<button type="submit" class="btn btn-primary">Send</button>
+</form>
+</div>
+    <div *ngIf="newPassengerse === '2'">
+        <form (ngSubmit)="onSubmit()" #myForm="ngForm" novalidate>
+      <div>
+        <div
+          *ngIf="myForm.submitted && myForm.controls['ticketOne'].invalid"
+          class="error-message"
+        >
+          Ticket One is required
+        </div>
+        <select
+          class="form__input"
+          placeholder="name"
+          [(ngModel)]="ticketOne"
+          id="ticketOne"
+          name="ticketOne"
+          required
+          #departurePlace="ngModel"
+        >
+          <option value="" disabled>Ticket</option>
+          <option value="400">B3</option>
+          <option value="200">E2</option>
+          <option value="200">E9</option>
+          <option value="400">B14</option>
+          <option value="200">E14</option>
+        </select>
+      </div>
+      <div>
+        <div
+          *ngIf="myForm.submitted && myForm.controls['ticketTwo'].invalid"
+          class="error-message"
+        >
+          Ticket TTwo is required
+        </div>
+        <select
+          class="form__input"
+          placeholder="name"
+          id="ticketTwo"
+          [(ngModel)]="ticketTwo"
+          name="ticketTwo"
+          required
+          #departurePlace="ngModel"
+        >
+          <option value="" disabled>Ticket</option>
+          <option value="400">B3</option>
+          <option value="200">E2</option>
+          <option value="200">E9</option>
+          <option value="400">B14</option>
+          <option value="200">E14</option>
+        </select>
+      </div>
+      <div
+        *ngIf="myForm.submitted && myForm.controls['bag'].invalid"
+        class="error-message"
+      >
+        Bag is required
+      </div>
+      <select
+        class="form__input"
+        id="bag"
+        placeholder="name"
+        [(ngModel)]="bag"
+        name="bag"
+        required
+        #bagName="ngModel"
+      >
+        <option value="" disabled>Bag</option>
+        <option value="50">Small</option>
+        <option value="80">Madium</option>
+        <option value="100">Big</option>
+      </select>
+      {{ bag }} zł
+      <button type="submit" class="btn btn-primary">Send</button>
+</form>
+    </div>
+   
+    <div *ngIf="newPassengerse === '3'">
+        <form (ngSubmit)="onSubmit()" #myForm="ngForm" novalidate>
+            <div>
+              <div
+                *ngIf="myForm.submitted && myForm.controls['ticketOne'].invalid"
+                class="error-message"
+              >
+                Ticket One is required
+              </div>
+              <select
+                class="form__input"
+                placeholder="name"
+                [(ngModel)]="ticketOne"
+                id="ticketOne"
+                name="ticketOne"
+                required
+                #departurePlace="ngModel"
+              >
+                <option value="" disabled>Ticket</option>
+                <option value="400">B3</option>
+                <option value="200">E2</option>
+                <option value="200">E9</option>
+                <option value="400">B14</option>
+                <option value="200">E14</option>
+              </select>
+            </div>
+            <div>
+              <div
+                *ngIf="myForm.submitted && myForm.controls['ticketTwo'].invalid"
+                class="error-message"
+              >
+                Ticket TTwo is required
+              </div>
+              <select
+                class="form__input"
+                placeholder="name"
+                id="ticketTwo"
+                [(ngModel)]="ticketTwo"
+                name="ticketTwo"
+                required
+                #departurePlace="ngModel"
+              >
+                <option value="" disabled>Ticket</option>
+                <option value="400">B3</option>
+                <option value="200">E2</option>
+                <option value="200">E9</option>
+                <option value="400">B14</option>
+                <option value="200">E14</option>
+              </select>
+            </div>
+      <div>
+        <div
+          *ngIf="myForm.submitted && myForm.controls['ticketThree'].invalid"
+          class="error-message"
+        >
+          Ticket Three is required
+        </div>
+        <select
+          class="form__input"
+          placeholder="name"
+          id="ticketThree "
+          [(ngModel)]="ticketThree"
+          name="ticketThree"
+          required
+          #departurePlac="ngModel"
+        >
+          <option value="" disabled>Ticket</option>
+          <option value="400">B3</option>
+          <option value="200">E2</option>
+          <option value="200">E9</option>
+          <option value="400">B14</option>
+          <option value="200">E14</option>
+        </select>
+      </div>
+      <div
+        *ngIf="myForm.submitted && myForm.controls['bag'].invalid"
+        class="error-message"
+      >
+        Bag is required
+      </div>
+      <select
+        class="form__input"
+        id="bag"
+        placeholder="name"
+        [(ngModel)]="bag"
+        name="bag"
+        required
+        #bagName="ngModel"
+      >
+        <option value="" disabled>Bag</option>
+        <option value="50">Small</option>
+        <option value="80">Madium</option>
+        <option value="100">Big</option>
+      </select>
+      {{ bag }} zł
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+    </div>
+  
+    
+  
 <p>summation works!</p>
 {{tempCites()}}°C
 {{cityWarsaw()}}°C
@@ -46,3 +273,4 @@
         Date: {{ newDate}}
         </p>
         <p>  Passengerse: {{ newPassengerse}}</p>
+        <p>  Price {{ sum}}</p>

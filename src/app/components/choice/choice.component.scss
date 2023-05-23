@@ -7,7 +7,8 @@
   text-transform: uppercase;
   background-color: green;
   color: white;
-
+  margin-top: 10px;
+margin-left: 285px;
   width: 100px;
   height: 30px;
   border: 1px solid black;
@@ -45,7 +46,7 @@
     background-color: black;
     width: 100%;
     padding: 3px;
-    font-size: 13px;
+    font-size: 14px;
     border: 1px solid green;
     border-radius: 3px;
   }
@@ -63,6 +64,7 @@
     border: 1px solid green;
   }
 }
+.turn::-webkit-calendar-picker-indicator{ filter: invert(1);}
 
 .widget {
   position: absolute;

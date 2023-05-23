@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild  } from '@angular/core';
 import {
   FormArray,
   FormGroup,
@@ -11,6 +11,7 @@ import { NgForm, ValidatorFn } from '@angular/forms';
 import { WeatherService } from 'src/app/services/weather.service';
 import { City, WeatherInfos } from 'src/interfaces/interfaces_custom';
 import { DataService } from 'src/app/services/data.service';
+
 
 @Component({
   selector: 'app-choice',
@@ -52,5 +53,27 @@ export class ChoiceComponent implements OnInit {
 
   onclick() {
     this.visible = !this.visible;
+  }
+  @ViewChild('myForm') myForm!: NgForm;
+  onSubmit() {
+    if (this.myForm.valid) { this.onclick();
+      
+    }
+  }
+  getCurrentDate(): string {
+    const today = new Date();
+    const year = today.getFullYear();
+    let month: string | number = today.getMonth() + 1;
+    let day: string | number = today.getDate();
+
+    // Dodaj zero przed miesiącem i dniem, jeśli są mniejsze niż 10
+    if (month < 10) {
+      month = '0' + month;
+    }
+    if (day < 10) {
+      day = '0' + day;
+    }
+
+    return `${year}-${month}-${day}`;
   }
 }

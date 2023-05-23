@@ -16,9 +16,12 @@ export class PlacesComponent implements OnInit {
   freeFour:any
   freeFive:any
   visible: boolean = false;
-  ticketBuisnesPl:number = 200 
-  ticketBuisnesEUR:number = 45 
-  ticketBuisnesUSD:number = 48 
+  ticketBuisnesPl:number = 400 
+  ticketBuisnesEUR:number = 90 
+  ticketBuisnesUSD:number = 96 
+  ticketEconomicPl:number = 200 
+  ticketEconomicEUR:number = 45 
+  ticketEconomicUSD:number = 48 
   exchange:any
   newDeparture!:string;
 

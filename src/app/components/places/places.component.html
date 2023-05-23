@@ -1,6 +1,8 @@
-<div *ngIf="newDeparture === 'London'">  Boeing 737</div>
-<div *ngIf="newDeparture === 'New York'"> Dreamliner 787</div>
-<div *ngIf="newDeparture === 'Warsaw'"> Embraer</div>
+<div class="plane__name" *ngIf="newDeparture === 'London'">Boeing 737</div>
+<div class="plane__name" *ngIf="newDeparture === 'New York'">
+  Dreamliner 787
+</div>
+<div class="plane__name" *ngIf="newDeparture === 'Warsaw'">Embraer</div>
 <body>
   <p class="plane__business">Business class</p>
   <p class="plane__economic">Economic class</p>
@@ -24,8 +26,8 @@
                   <select
                     value="Choice"
                     class="exchange__input"
-                    [(ngModel)]="exchange"
-                    name="exchange"
+                    [(ngModel)]="freeOne"
+                    name="freeOne"
                   >
                     <option value="PL">PLN</option>
                     <option value="EUR">EUR</option>
@@ -33,11 +35,11 @@
                   </select>
                 </div>
                 <div class="exchange__price">
-                  <div *ngIf="exchange === 'PL'">{{ ticketBuisnesPl }} PLN</div>
-                  <div *ngIf="exchange === 'EUR'">
+                  <div *ngIf="freeOne === 'PL'">{{ ticketBuisnesPl }} PLN</div>
+                  <div *ngIf="freeOne === 'EUR'">
                     {{ ticketBuisnesEUR }} EUR
                   </div>
-                  <div *ngIf="exchange === 'USD'">
+                  <div *ngIf="freeOne === 'USD'">
                     {{ ticketBuisnesUSD }} USD
                   </div>
                 </div>
@@ -49,40 +51,40 @@
         <div class="plane__linetwo"></div>
         <div class="plane__seat">E1</div>
         <div
-        class="form__check"
-        (mouseenter)="freeTwo = true"
-        (mouseleave)="freeTwo = false"
-      >
-        <div class="plane__seat free">E2</div>
-        <div *ngIf="freeTwo">
-          <div>
-            <div class="exchange__txt">
-              <div>
-                Check price E2
-                <select
-                  value="Choice"
-                  class="exchange__input"
-                  [(ngModel)]="exchange"
-                  name="exchange"
-                >
-                  <option value="PL">PLN</option>
-                  <option value="EUR">EUR</option>
-                  <option value="USD">USD</option>
-                </select>
-              </div>
-              <div class="exchange__price">
-                <div *ngIf="exchange === 'PL'">{{ ticketBuisnesPl }} PLN</div>
-                <div *ngIf="exchange === 'EUR'">
-                  {{ ticketBuisnesEUR }} EUR
+          class="form__check"
+          (mouseenter)="freeTwo = true"
+          (mouseleave)="freeTwo = false"
+        >
+          <div class="plane__seat free">E2</div>
+          <div *ngIf="freeTwo">
+            <div>
+              <div class="exchange__txt">
+                <div>
+                  Check price E2
+                  <select
+                    value="Choice"
+                    class="exchange__input"
+                    [(ngModel)]="freeTwo"
+                    name="freeTwo"
+                  >
+                    <option value="PL">PLN</option>
+                    <option value="EUR">EUR</option>
+                    <option value="USD">USD</option>
+                  </select>
                 </div>
-                <div *ngIf="exchange === 'USD'">
-                  {{ ticketBuisnesUSD }} USD
+                <div class="exchange__price">
+                  <div *ngIf="freeTwo === 'PL'">{{ ticketEconomicPl }} PLN</div>
+                  <div *ngIf="freeTwo === 'EUR'">
+                    {{ ticketEconomicEUR }} EUR
+                  </div>
+                  <div *ngIf="freeTwo === 'USD'">
+                    {{ ticketEconomicUSD }} USD
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
         <div class="plane__seat">E3</div>
         <div class="plane__seat">E4</div>
       </div>
@@ -106,40 +108,40 @@
       <div class="plane__seat">B12</div>
       <div class="plane__linetwo"></div>
       <div
-      class="form__check"
-      (mouseenter)=" freeThree = true"
-      (mouseleave)=" freeThree = false"
-    >
-      <div class="plane__seat free">E9</div>
-      <div *ngIf=" freeThree">
-        <div>
-          <div class="exchange__txt">
-            <div>
-              Check price E9
-              <select
-                value="Choice"
-                class="exchange__input"
-                [(ngModel)]="exchange"
-                name="exchange"
-              >
-                <option value="PL">PLN</option>
-                <option value="EUR">EUR</option>
-                <option value="USD">USD</option>
-              </select>
-            </div>
-            <div class="exchange__price">
-              <div *ngIf="exchange === 'PL'">{{ ticketBuisnesPl }} PLN</div>
-              <div *ngIf="exchange === 'EUR'">
-                {{ ticketBuisnesEUR }} EUR
+        class="form__check"
+        (mouseenter)="freeThree = true"
+        (mouseleave)="freeThree = false"
+      >
+        <div class="plane__seat free">E9</div>
+        <div *ngIf="freeThree">
+          <div>
+            <div class="exchange__txt">
+              <div>
+                Check price E9
+                <select
+                  value="Choice"
+                  class="exchange__input"
+                  [(ngModel)]="freeThree"
+                  name="freeThree"
+                >
+                  <option value="PL">PLN</option>
+                  <option value="EUR">EUR</option>
+                  <option value="USD">USD</option>
+                </select>
               </div>
-              <div *ngIf="exchange === 'USD'">
-                {{ ticketBuisnesUSD }} USD
+              <div class="exchange__price">
+                <div *ngIf="freeThree === 'PL'">{{ ticketEconomicPl }} PLN</div>
+                <div *ngIf="freeThree === 'EUR'">
+                  {{ ticketEconomicEUR }} EUR
+                </div>
+                <div *ngIf="freeThree === 'USD'">
+                  {{ ticketEconomicUSD }} USD
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
       <div class="plane__seat">E10</div>
       <div class="plane__seat">E11</div>
       <div class="plane__seat">E12</div>
@@ -147,79 +149,75 @@
     <div class="plane__row">
       <div class="plane__seat">B13</div>
       <div
-      class="form__check"
-      (mouseenter)="freeFour = true"
-      (mouseleave)="freeFour = false"
-    >
-      <div class="plane__seat free">B14</div>
-      <div *ngIf="freeFour">
-        <div>
-          <div class="exchange__txt">
-            <div>
-              Check price B14
-              <select
-                value="Choice"
-                class="exchange__input"
-                [(ngModel)]="exchange"
-                name="exchange"
-              >
-                <option value="PL">PLN</option>
-                <option value="EUR">EUR</option>
-                <option value="USD">USD</option>
-              </select>
-            </div>
-            <div class="exchange__price">
-              <div *ngIf="exchange === 'PL'">{{ ticketBuisnesPl }} PLN</div>
-              <div *ngIf="exchange === 'EUR'">
-                {{ ticketBuisnesEUR }} EUR
+        class="form__check"
+        (mouseenter)="freeFour = true"
+        (mouseleave)="freeFour = false"
+      >
+        <div class="plane__seat free">B14</div>
+        <div *ngIf="freeFour">
+          <div>
+            <div class="exchange__txt">
+              <div>
+                Check price B14
+                <select
+                  value="Choice"
+                  class="exchange__input"
+                  [(ngModel)]="freeFour"
+                  name="freeFour"
+                >
+                  <option value="PL">PLN</option>
+                  <option value="EUR">EUR</option>
+                  <option value="USD">USD</option>
+                </select>
               </div>
-              <div *ngIf="exchange === 'USD'">
-                {{ ticketBuisnesUSD }} USD
+              <div class="exchange__price">
+                <div *ngIf="freeFour === 'PL'">{{ ticketBuisnesPl }} PLN</div>
+                <div *ngIf="freeFour === 'EUR'">{{ ticketBuisnesEUR }} EUR</div>
+                <div *ngIf="freeFour === 'USD'">{{ ticketBuisnesUSD }} USD</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
       <div class="plane__seat">B15</div>
       <div class="plane__seat">B16</div>
       <div class="plane__linetwo"></div>
       <div class="plane__seat">E13</div>
       <div
-      class="form__check"
-      (mouseenter)="freeFive = true"
-      (mouseleave)="freeFive = false"
-    >
-      <div class="plane__seat free">B14</div>
-      <div *ngIf="freeFive">
-        <div>
-          <div class="exchange__txt">
-            <div>
-              Check price B14
-              <select
-                value="Choice"
-                class="exchange__input"
-                [(ngModel)]="exchange"
-                name="exchange"
-              >
-                <option value="PL">PLN</option>
-                <option value="EUR">EUR</option>
-                <option value="USD">USD</option>
-              </select>
-            </div>
-            <div class="exchange__price">
-              <div *ngIf="exchange === 'PL'">{{ ticketBuisnesPl }} PLN</div>
-              <div *ngIf="exchange === 'EUR'">
-                {{ ticketBuisnesEUR }} EUR
+        class="form__check"
+        (mouseenter)="freeFive = true"
+        (mouseleave)="freeFive = false"
+      >
+        <div class="plane__seat free">E14</div>
+        <div *ngIf="freeFive">
+          <div>
+            <div class="exchange__txt">
+              <div>
+                Check price E14
+                <select
+                  value="Choice"
+                  class="exchange__input"
+                  [(ngModel)]="freeFive"
+                  name="freeFive"
+                >
+                  <option value="PL">PLN</option>
+                  <option value="EUR">EUR</option>
+                  <option value="USD">USD</option>
+                </select>
               </div>
-              <div *ngIf="exchange === 'USD'">
-                {{ ticketBuisnesUSD }} USD
+              <div class="exchange__price">
+                <div *ngIf="freeFive === 'PL'">{{ ticketEconomicPl }} PLN</div>
+                <div *ngIf="freeFive === 'EUR'">
+                  {{ ticketEconomicEUR }} EUR
+                </div>
+                <div *ngIf="freeFive === 'USD'">
+                  {{ ticketEconomicUSD }} USD
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
       <div class="plane__seat">E15</div>
       <div class="plane__seat">E16</div>
     </div>
