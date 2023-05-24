@@ -1,10 +1,15 @@
+<ng-container *ngIf="visible">
+  <div>
+    <img class="summary__image" [src]="buyUrl" [alt]="descriptionBuy" />
+  </div>
+</ng-container>
 <div class="summary">
   <div *ngIf="newPassengerse === '1'">
     <form (ngSubmit)="onSubmit()" #myForm="ngForm" novalidate>
       <div>
         <div
           *ngIf="myForm.submitted && myForm.controls['ticketOne'].invalid"
-          class="summary_one"
+          class="summary__error"
         >
           Choose a ticket
         </div>
@@ -28,9 +33,9 @@
       <div>
         <div
           *ngIf="myForm.submitted && myForm.controls['bag'].invalid"
-          class="error-message"
+          class="summary__error"
         >
-          Bag is required
+          Choose a bag
         </div>
         <select
           class="summary__bag"
@@ -47,7 +52,7 @@
           <option value="100">Big - 100 PLN</option>
         </select>
       </div>
-      <button type="submit" class="summary__button">Send</button>
+      <button type="submit" class="summary__button">Apply</button>
     </form>
   </div>
   <div *ngIf="newPassengerse === '2'">
@@ -55,7 +60,7 @@
       <div>
         <div
           *ngIf="myForm.submitted && myForm.controls['ticketOne'].invalid"
-          class="error-message"
+          class="summary__error"
         >
           Choose a ticket
         </div>
@@ -79,7 +84,7 @@
       <div>
         <div
           *ngIf="myForm.submitted && myForm.controls['ticketTwo'].invalid"
-          class="error-message"
+          class="summary__error"
         >
           Choose a ticket
         </div>
@@ -102,7 +107,7 @@
       </div>
       <div
         *ngIf="myForm.submitted && myForm.controls['bag'].invalid"
-        class="error-message"
+        class="summary__error"
       >
         Choose a Bag
       </div>
@@ -122,7 +127,7 @@
           <option value="100">Big - 100 PLN</option>
         </select>
       </div>
-      <button type="submit" class="summary__button">Send</button>
+      <button type="submit" class="summary__button">Apply</button>
     </form>
   </div>
 
@@ -131,7 +136,7 @@
       <div>
         <div
           *ngIf="myForm.submitted && myForm.controls['ticketOne'].invalid"
-          class="error-message"
+          class="summary__error"
         >
           Choose a ticket
         </div>
@@ -155,9 +160,9 @@
       <div>
         <div
           *ngIf="myForm.submitted && myForm.controls['ticketTwo'].invalid"
-          class="error-message"
+          class="summary__error"
         >
-          Ticket TTwo is required
+          Choose a ticket
         </div>
         <select
           class="summary__select"
@@ -179,7 +184,7 @@
       <div>
         <div
           *ngIf="myForm.submitted && myForm.controls['ticketThree'].invalid"
-          class="error-message"
+          class="summary__error"
         >
           Choose a ticket
         </div>
@@ -202,7 +207,7 @@
       </div>
       <div
         *ngIf="myForm.submitted && myForm.controls['bag'].invalid"
-        class="error-message"
+        class="summary__error"
       >
         Choose a bag
       </div>
@@ -222,7 +227,7 @@
           <option value="100">Big - 100 PLN</option>
         </select>
       </div>
-      <button type="submit" class="summary__button">Send</button>
+      <button type="submit" class="summary__button">Apply</button>
     </form>
   </div>
   <div class="summary__line"></div>
@@ -245,12 +250,5 @@
   <p class="summary__txt">Price: {{ sum }} PLN</p>
   <div *ngIf="sum > 0">
     <button class="summary__buy" (click)="onclick()">Buy</button>
-    <ng-container *ngIf="visible">
-      <div class="summary__image">
-        <p>
-          <!-- <img  [src]="arrowUrl" [alt]="descriptionArrow" /> -->
-        </p>
-      </div>
-    </ng-container>
   </div>
 </div>

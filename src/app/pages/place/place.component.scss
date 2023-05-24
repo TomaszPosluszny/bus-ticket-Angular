@@ -12,48 +12,65 @@
 }
 .plane {
   position: absolute;
+  margin-left: 0px;
+  margin-top: 30px;
   width: 430px;
   height: 210px;
   background-color: white;
-  margin-left: 400px;
-  margin-top: 30px;
+
   border-radius: 10px;
 }
 .summation {
   display: flex;
   justify-content: center;
   position: absolute;
+  margin-left: 0px;
+  margin-top: 270px;
   width: 280px;
-  height: 550px;
-  margin-left: 930px;
-  margin-top: 30px;
+  height: 515px;
   background-color: white;
   border: 1px solid green;
   border-radius: 4px;
   box-shadow: 0 2px 50px gray;
 }
-.tickets{
+.tickets {
   position: absolute;
-  width: 200px;
-  height:350px;
   margin-left: 230px;
   margin-top: 200px;
+  width: 200px;
+  height: 350px;
   background-color: white;
   border: 1px solid green;
   border-radius: 4px;
   box-shadow: 0 2px 50px gray;
+}
+@media (max-width: 576px) {
+  .place {
+    margin-top: 40px;
+    &__image {
+      width: 300px;
+      height: 650px;
+    }
+  }
+  .plane {
+    width: 300px;
+  }
 }
 @media (min-width: 1500px) {
   .place {
-    display: flex;
-    justify-content: center;
-
     &__image {
-      width: 1200px;
-      height: 600px;
       margin-top: 15px;
       border-radius: 8px;
+      width: 1200px;
+      height: 540px;
       box-shadow: 0 2px 50px DimGray;
     }
+  }
+  .summation {
+    margin-left: 700px;
+    margin-top: 30px;
+  }
+  .plane {
+    margin-left: -400px;
   }
 }

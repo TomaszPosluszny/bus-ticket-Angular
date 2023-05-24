@@ -36,7 +36,6 @@
     height: 50px;
     margin-left: 27px;
     margin-top: 5px;
-   
   }
   &__arrow1 {
     position: absolute;
@@ -44,7 +43,6 @@
     height: 50px;
     margin-left: -80px;
     margin-top: 5px;
-   
   }
   &__temp {
     position: absolute;
@@ -59,7 +57,7 @@
   }
   &__login {
     position: absolute;
-    margin-top: 350px;
+    margin-top: 220px;
     width: 500px;
     height: 50px;
     font-family: "Raleway", sans-serif;
@@ -71,19 +69,19 @@
 }
 
 .button {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  margin-left: 300px;
+  margin-top: 15px;
+  width: 100px;
+  height: 30px;
   font-family: "Raleway", sans-serif;
   font-size: 2.9;
   color: white;
   text-transform: uppercase;
   text-decoration: none;
-  margin-left: 300px;
-  margin-top: 15px;
-  width: 100px;
-  height: 30px;
   transition: color 0.3s;
   border: 1px solid green;
   cursor: pointer;
@@ -100,8 +98,8 @@
       margin-left: 1px;
     }
     &__temp {
-      margin-top: 80px;
       position: absolute;
+      margin-top: 80px;
       color: black;
       font-size: 16px;
     }
@@ -111,9 +109,26 @@
       color: black;
       font-size: 16px;
     }
+    &__login {
+      position: absolute;
+      margin-top: 300px;
+      // margin-left: -10px;
+      width: 220px;
+      font-size: 12px;
+    }
   }
   .button {
     margin-left: 10px;
     margin-right: 10px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .nav {
+    &__login {
+      margin-top: 290px;
+      width: 500px;
+      height: 50px;
+    }
   }
 }

@@ -46,7 +46,7 @@
           class="form__error"
           *ngIf="myForm.submitted && myForm.controls['origin'].invalid"
         >
-        Select a Origin 
+          Select a Origin
         </div>
         <select
           class="form__input"
@@ -58,40 +58,43 @@
           #originPlace="ngModel"
         >
           <option value="" disabled>Origin</option>
-          <option value="Wrocław">Wrocław</option>
+          <option class="" value="Wrocław">Wrocław</option>
         </select>
       </div>
-      <br /><br />
+
       <div>
         <div
           class="form__error"
           *ngIf="myForm.submitted && myForm.controls['departure'].invalid"
         >
-        Select a departure 
+          Select a departure
         </div>
-        <select
-          class="form__input"
-          id="departure"
-          placeholder="name"
-          [(ngModel)]="departure"
-          name="departure"
-          required
-          #departurePlace="ngModel"
-        >
-          <option value="" disabled>Departure</option>
-          <option value="Warsaw">Warsaw</option>
-          <option value="London">London</option>
-          <option value="New York">New York</option>
-        </select>
+        <div class="form">
+          <select
+            class="form__input"
+            id="departure"
+            placeholder="name"
+            [(ngModel)]="departure"
+            name="departure"
+            required
+            #departurePlace="ngModel"
+          >
+            <option value="" disabled>Departure</option>
+            <option value="Warsaw">Warsaw</option>
+            <option value="London">London</option>
+            <option value="New York">New York</option>
+          </select>
+        </div>
       </div>
     </div>
+
     <div class="form">
       <div>
         <div
           class="form__error"
           *ngIf="myForm.submitted && myForm.controls['date'].invalid"
         >
-        Select a date 
+          Select a date
         </div>
         <input
           class="form__input turn"
@@ -105,27 +108,30 @@
           #datePlace="ngModel"
         />
       </div>
-      <div>
-        <div
-          class="form__error"
-          *ngIf="myForm.submitted && myForm.controls['passengers'].invalid"
-        >
-        Select a passengers 
+
+      <div class="form">
+        <div>
+          <div
+            class="form__error"
+            *ngIf="myForm.submitted && myForm.controls['passengers'].invalid"
+          >
+            Select a passengers
+          </div>
+          <select
+            class="form__input"
+            id="passengers"
+            placeholder="name"
+            [(ngModel)]="passengers"
+            name="passengers"
+            required
+            #passengersPlace="ngModel"
+          >
+            <option value="" disabled>Passengers</option>
+            <option>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
         </div>
-        <select
-          class="form__input"
-          id="passengers"
-          placeholder="name"
-          [(ngModel)]="passengers"
-          name="passengers"
-          required
-          #passengersPlace="ngModel"
-        >
-          <option value="" disabled>Passengers</option>
-          <option>1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
       </div>
     </div>
     <button class="button" type="submit" (click)="sendForm()">Accept</button>

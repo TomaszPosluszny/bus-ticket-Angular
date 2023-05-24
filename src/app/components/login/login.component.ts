@@ -11,14 +11,15 @@ export class LoginComponent implements OnInit {
   constructor(private http: HttpClient, private dataService: DataService) {}
   login: string = '';
   myData: any;
-  sendForm() {
-    this.dataService.editLogin(this.login);
-  }
 
   ngOnInit() {
     this.getData().subscribe((data) => {
       this.myData = data;
     });
+  }
+
+  sendForm() {
+    this.dataService.editLogin(this.login);
   }
 
   getData() {

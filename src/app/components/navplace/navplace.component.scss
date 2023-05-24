@@ -1,123 +1,121 @@
 .nav {
+  display: flex;
+  justify-content: space-around;
+  top: 0;
+  width: 100vw;
+  height: 70px;
+  background-color: black;
+  &__txt {
+    margin-right: 10px;
+    margin-left: 40px;
+    color: white;
+    font-size: 30px;
+  }
+  &__logo {
     display: flex;
     justify-content: space-around;
-    top: 0;
-    width: 100vw;
-    height: 70px;
+    margin-left: 0;
+  }
+  &__image {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    cursor: pointer;
+  }
+  &__image:hover {
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
+  }
+  &__arrow {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-left: 27px;
+    margin-top: 5px;
+  }
+  &__arrow1 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-left: -80px;
+    margin-top: 5px;
+  }
+  &__temp {
+    position: absolute;
+    font-size: 12px;
+    color: white;
+  }
+  &__data {
+    margin-top: 30px;
+    position: absolute;
+    color: white;
+    font-size: 12px;
+  }
+  &__login {
+    position: absolute;
+    margin-top: 350px;
+    width: 500px;
+    height: 50px;
+    font-family: "Raleway", sans-serif;
     background-color: black;
+    color: white;
+    text-align: center;
+    border: 1px solid green;
+  }
+  &__name {
+    color: white;
+  }
+}
+
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 300px;
+  margin-top: 15px;
+  width: 100px;
+  height: 30px;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.9;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s;
+  border: 1px solid green;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: green;
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .nav {
     &__txt {
       margin-right: 10px;
-      margin-left: 40px;
-      color: white;
-      font-size: 30px;
-    }
-    &__logo {
-      display: flex;
-      justify-content: space-around;
-    }
-    &__image {
-      -webkit-transition: all 1s ease;
-      -moz-transition: all 1s ease;
-      -o-transition: all 1s ease;
-      -ms-transition: all 1s ease;
-      transition: all 1s ease;
-      cursor: pointer;
-    }
-    &__image:hover {
-      -webkit-transform: rotate(30deg);
-      -moz-transform: rotate(30deg);
-      -o-transform: rotate(30deg);
-      -ms-transform: rotate(30deg);
-      transform: rotate(30deg);
-    }
-    &__arrow {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      margin-left: 27px;
-      margin-top: 5px;
-     
-    }
-    &__arrow1 {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      margin-left: -80px;
-      margin-top: 5px;
-     
+      margin-left: 1px;
     }
     &__temp {
       position: absolute;
-      color: white;
-      font-size: 12px;
+      margin-top: 80px;
+      color: black;
+      font-size: 16px;
     }
     &__data {
-      margin-top: 30px;
+      margin-top: 105px;
       position: absolute;
-      color: white;
-      font-size: 12px;
-    }
-    &__login {
-      position: absolute;
-      margin-top: 350px;
-      width: 500px;
-      height: 50px;
-      font-family: "Raleway", sans-serif;
-      background-color: black;
-      color: white;
-      text-align: center;
-      border: 1px solid green;
-    }
-    &__name{
-        color: white;
+      color: black;
+      font-size: 16px;
     }
   }
-  
   .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    font-family: "Raleway", sans-serif;
-    font-size: 2.9;
-    color: white;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-left: 300px;
-    margin-top: 15px;
-    width: 100px;
-    height: 30px;
-    transition: color 0.3s;
-    border: 1px solid green;
-    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
   }
-  .button:hover {
-    background-color: green;
-    color: white;
-  }
-  
-  @media (max-width: 576px) {
-    .nav {
-      &__txt {
-        margin-right: 10px;
-        margin-left: 1px;
-      }
-      &__temp {
-        margin-top: 80px;
-        position: absolute;
-        color: black;
-        font-size: 16px;
-      }
-      &__data {
-        margin-top: 105px;
-        position: absolute;
-        color: black;
-        font-size: 16px;
-      }
-    }
-    .button {
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-  }
-  
+}

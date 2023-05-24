@@ -15,6 +15,14 @@ export class NavComponent implements OnInit {
   kalwinTemp: number = 273.15;
   start: any = 'Wrocław';
 
+  ngOnInit(): void {
+    this.weatherService.nameCity = 'Wrocław';
+    this.weatherService.getCity().subscribe((data: any) => {
+      this.dataTemp = data;
+      console.log(this.dataTemp);
+    });
+  }
+
   nameCites() {
     return this.start;
   }
@@ -27,13 +35,6 @@ export class NavComponent implements OnInit {
     let ChangedFormat = this.pipe.transform(this.today, 'dd/MM/YYYY');
     this.changedDate = ChangedFormat;
     console.log(this.changedDate);
-  }
-  ngOnInit(): void {
-    this.weatherService.nameCity = 'Wrocław';
-    this.weatherService.getCity().subscribe((data: any) => {
-      this.dataTemp = data;
-      console.log(this.dataTemp);
-    });
   }
 
   logoUrl: string =

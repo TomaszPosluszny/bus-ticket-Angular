@@ -6,21 +6,20 @@
   &__select {
     margin-top: 10px;
     margin-bottom: 10px;
-
-    color: white;
-    background-color: black;
     width: 100%;
     padding: 3px;
     font-size: 14px;
+    color: white;
+    background-color: black;
     border: 1px solid green;
     border-radius: 3px;
   }
   &__bag {
-    color: white;
-    background-color: black;
     width: 100%;
     padding: 3px;
     font-size: 14px;
+    color: white;
+    background-color: black;
     border: 1px solid green;
     border-radius: 3px;
   }
@@ -28,14 +27,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Raleway", sans-serif;
-    text-transform: uppercase;
-    background-color: green;
-    color: white;
     margin-top: 10px;
     margin-left: 20px;
     width: 100px;
     height: 30px;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    background-color: green;
+    color: white;
     border: 1px solid black;
     box-shadow: 0 2px 50px gray;
     cursor: pointer;
@@ -45,8 +44,8 @@
     color: white;
   }
   &__line {
-    width: 100%px;
     margin-top: 5px;
+    width: 100%px;
     height: 3px;
     background-color: black;
   }
@@ -54,22 +53,22 @@
     font-size: 19px;
   }
   &__tmp {
-    font-size: 21px;
     margin-left: 40px;
+    font-size: 21px;
     color: green;
   }
   &__buy {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Raleway", sans-serif;
-    text-transform: uppercase;
-    background-color: green;
-    color: white;
     margin-top: 10px;
     margin-left: 15px;
     width: 100px;
     height: 30px;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    background-color: green;
+    color: white;
     border: 1px solid black;
     box-shadow: 0 2px 50px gray;
     cursor: pointer;
@@ -77,5 +76,38 @@
   &__buy:hover {
     background-color: black;
     color: white;
+  }
+  &__image {
+    position: absolute;
+    margin-left: -290px;
+    width: 700px;
+    height: 500px;
+    margin-top: -50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 50px DimGray;
+  }
+  &__error {
+    color: green;
+    margin-left: 2px;
+  }
+}
+@media (max-width: 576px) {
+  .summary {
+    &__image {
+      margin-left: -90px;
+      width: 320px;
+      height: 220px;
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  .summary {
+    &__image {
+      margin-left: -650px;
+      margin-top: 15px;
+      width: 780px;
+      height: 470px;
+    }
   }
 }

@@ -18,8 +18,20 @@ export class NavplaceComponent implements OnInit {
   dataTemp: any = '';
   kalwinTemp: number = 273.15;
   start: any = 'Wrocław';
+
   newLogin!: string;
   castLogin!: string;
+
+  ngOnInit(): void {
+    this.weatherService.nameCity = 'Wrocław';
+    this.weatherService.getCity().subscribe((data: any) => {
+      this.dataTemp = data;
+      console.log(this.dataTemp);
+    });
+    this.dataService.castLogin.subscribe(
+      (newLogin) => (this.newLogin = newLogin)
+    );
+  }
 
   nameCites() {
     return this.start;
@@ -33,16 +45,6 @@ export class NavplaceComponent implements OnInit {
     let ChangedFormat = this.pipe.transform(this.today, 'dd/MM/YYYY');
     this.changedDate = ChangedFormat;
     console.log(this.changedDate);
-  }
-  ngOnInit(): void {
-    this.weatherService.nameCity = 'Wrocław';
-    this.weatherService.getCity().subscribe((data: any) => {
-      this.dataTemp = data;
-      console.log(this.dataTemp);
-    });
-    this.dataService.castLogin.subscribe(
-      (newLogin) => (this.newLogin = newLogin)
-    );
   }
 
   logoUrl: string =

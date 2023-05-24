@@ -2,7 +2,7 @@
   position: relative;
   width: 420px;
   height: 190px;
-  &__name{
+  &__name {
     display: flex;
     justify-content: center;
     text-transform: uppercase;
@@ -52,20 +52,21 @@
 }
 .exchange {
   &__input {
-    color: white;
-    background-color: black;
     width: 20px;
     padding: 3px;
     font-size: 13px;
     border: 1px solid green;
     border-radius: 3px;
     font-size: 10px;
+    color: white;
+    background-color: black;
   }
 
   &__txt {
     padding: 5px;
     position: absolute;
     width: 140px;
+    margin-left: -50px;
     height: 70px;
     background-color: black;
     margin-top: -60px;
@@ -78,5 +79,21 @@
     margin-left: 20px;
     color: green;
     font-size: 19px;
+  }
+}
+@media (max-width: 576px) {
+  .plane {
+    position: relative;
+    width: 290px;
+    height: 190px;
+
+    &__economic {
+      margin-left: 170px;
+    }
+    &__business {
+      position: absolute;
+      margin-left: 20px;
+      margin-top: 155px;
+    }
   }
 }

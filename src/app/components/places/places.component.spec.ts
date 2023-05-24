@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PlacesComponent } from './places.component';
 
 describe('PlacesComponent', () => {
@@ -8,9 +7,8 @@ describe('PlacesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PlacesComponent ]
-    })
-    .compileComponents();
+      declarations: [PlacesComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PlacesComponent);
     component = fixture.componentInstance;

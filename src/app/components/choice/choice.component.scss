@@ -1,16 +1,13 @@
 .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
+  
+  margin-top: 10px;
+  margin-left: 160px;
+  width: 100px;
+  height: 30px;
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   background-color: green;
   color: white;
-  margin-top: 10px;
-margin-left: 285px;
-  width: 100px;
-  height: 30px;
   border: 1px solid black;
   box-shadow: 0 2px 50px gray;
   cursor: pointer;
@@ -23,7 +20,8 @@ margin-left: 285px;
 .form {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 10px;
+  margin-top: 9px;
+
   &__temp {
     display: flex;
     justify-content: space-evenly;
@@ -31,30 +29,30 @@ margin-left: 285px;
   }
   &__check {
     margin-left: 220px;
+    margin-bottom: 25px;
     width: 190px;
     height: 10px;
     font-size: 16px;
     font-weight: 700;
-    margin-bottom: 25px;
   }
   &__error {
     color: green;
     margin-left: 2px;
   }
   &__input {
-    color: white;
-    background-color: black;
-    width: 100%;
+    width: 105px;
+    font-size: 8px;
     padding: 3px;
     font-size: 14px;
+    color: white;
+    background-color: black;
     border: 1px solid green;
     border-radius: 3px;
   }
   &__login {
-    
     position: absolute;
-    margin-left: 230px;
-   margin-top: -100px;
+    margin-left: 120px;
+    margin-top: -100px;
     width: 200px;
     height: 200px;
     font-family: "Raleway", sans-serif;
@@ -63,20 +61,25 @@ margin-left: 285px;
     text-align: center;
     border: 1px solid green;
   }
+  &__Value {
+    height: 300px;
+  }
 }
-.turn::-webkit-calendar-picker-indicator{ filter: invert(1);}
+.turn::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
 
 .widget {
   position: absolute;
+  margin-top: -110px;
   height: 100px;
   width: 300px;
   background-color: black;
-  margin-top: -110px;
   border: 1px solid green;
   &__select {
-    margin: 5px;
     display: flex;
     justify-content: space-evenly;
+    margin: 5px;
   }
   &__error {
     color: green;
@@ -89,12 +92,12 @@ margin-left: 285px;
     justify-content: center;
     align-items: center;
     position: absolute;
-    font-family: "Raleway", sans-serif;
-    text-transform: uppercase;
-    background-color: black;
-    color: white;
     width: 100px;
     height: 30px;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
     border: 1px solid green;
     box-shadow: 0 2px 50px gray;
     cursor: pointer;
@@ -107,12 +110,110 @@ margin-left: 285px;
     color: white;
   }
   &__city {
-    color: white;
-    background-color: black;
     width: 20px;
     padding: 3px;
+    color: white;
+    background-color: black;
     font-size: 12px;
     border: 1px solid green;
     border-radius: 3px;
+  }
+}
+@media (max-width: 576px) {
+  .button {
+    margin-left: 90px;
+  }
+  .choice {
+    margin-top: 700px;
+
+    width: 650px;
+    height: 195px;
+  }
+  .form {
+    flex-direction: column;
+    &__check {
+      margin-left: 10px;
+    }
+    &__input {
+      padding: 3px;
+      color: white;
+      background-color: black;
+      margin-left: 30px;
+      font-size: 8px;
+      font-size: 14px;
+      border: 1px solid green;
+      border-radius: 3px;
+    }
+    &__login {
+      margin-left: 25px;
+      margin-top: -20px;
+    }
+  }
+  .widget {
+    position: absolute;
+    height: 100px;
+    width: 250px;
+    margin-top: -110px;
+    margin-left: -40px;
+    background-color: black;
+    border: 1px solid green;
+    &__select {
+      margin: 5px;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    &__error {
+      color: green;
+    }
+    &__temp {
+      color: white;
+    }
+    &__button {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      width: 100px;
+      height: 30px;
+      font-family: "Raleway", sans-serif;
+      text-transform: uppercase;
+      background-color: black;
+      color: white;
+      border: 1px solid green;
+      box-shadow: 0 2px 50px gray;
+      cursor: pointer;
+    }
+    &__button:hover {
+      background-color: green;
+      color: white;
+    }
+    &__txt {
+      color: white;
+    }
+    &__city {
+      width: 12px;
+      padding: 3px;
+      font-size: 9px;
+      background-color: black;
+      color: white;
+      border: 1px solid green;
+      border-radius: 3px;
+    }
+  }
+}
+@media (min-width: 1500px) {
+  .button {
+    margin-left: 285px;
+  }
+  .choice {
+    margin-top: 430px;
+
+    width: 650px;
+    height: 195px;
+  }
+  .form {
+    &__login {
+      margin-left: 230px;
+      margin-top: -100px;
+    }
   }
 }

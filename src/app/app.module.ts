@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChoiceComponent } from './components/choice/choice.component';
 import { LoginComponent } from './components/login/login.component';
-import { MainComponent } from './components/main/main.component';
 import { NavComponent } from './components/nav/nav.component';
 import { SummeryComponent } from './components/summery/summery.component';
 import { PlaceComponent } from './pages/place/place.component';
@@ -24,7 +23,6 @@ import { NavplaceComponent } from './components/navplace/navplace.component';
     AppComponent,
     ChoiceComponent,
     LoginComponent,
-    MainComponent,
     NavComponent,
     SummeryComponent,
     PlaceComponent,
@@ -32,7 +30,6 @@ import { NavplaceComponent } from './components/navplace/navplace.component';
     PlacesComponent,
     SummationComponent,
     NavplaceComponent,
-   
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule, FormsModule ],
   providers: [

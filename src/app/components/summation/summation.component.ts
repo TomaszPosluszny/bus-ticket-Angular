@@ -6,32 +6,80 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-summation',
   templateUrl: './summation.component.html',
-  styleUrls: ['./summation.component.scss']
+  styleUrls: ['./summation.component.scss'],
 })
 export class SummationComponent implements OnInit {
-
-  constructor(private weatherService: WeatherService, private dataService: DataService) { }
+  constructor(
+    private weatherService: WeatherService,
+    private dataService: DataService
+  ) {}
 
   dataTemp: any = '';
-  warsawTemp:any=''
-  londonTemp:any=''
-  newyorkTemp:any=''
+  warsawTemp: any = '';
+  londonTemp: any = '';
+  newyorkTemp: any = '';
   kalwinTemp: number = 273.15;
-  myValue:any
-  name = 'Angular';
+
   user!: string;
   newUser!: string;
-  newOrigin!:string;
-  castOrigin!:string;
-  newDeparture!:string;
-  castDeparture!:string;
-  newDate!:string;
-  castDate!:string;
-  newPassengerse!:string;
-  castPassengerse!:string;
-  newBag!:string
-  castBag!:string
-  
+  newOrigin!: string;
+  castOrigin!: string;
+  newDeparture!: string;
+  castDeparture!: string;
+  newDate!: string;
+  castDate!: string;
+  newPassengerse!: string;
+  castPassengerse!: string;
+  newBag!: string;
+  castBag!: string;
+
+  visible: boolean = false;
+
+  ticketOne: any = '';
+  ticketTwo: any = '';
+  ticketThree: any = '';
+  bag: any = '';
+  sum: number = 0;
+
+  buyUrl: string =
+    'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/master/src/app/components/images/buy.jpg';
+
+  descriptionBuy: string = ' This is plane';
+
+  ngOnInit(): void {
+    this.dataService.castOrigin.subscribe(
+      (newOrigin) => (this.newOrigin = newOrigin)
+    );
+    this.dataService.castDeparture.subscribe(
+      (newDeparture) => (this.newDeparture = newDeparture)
+    );
+    this.dataService.castDate.subscribe((newDate) => (this.newDate = newDate));
+    this.dataService.castPassengerse.subscribe(
+      (newPassengerse) => (this.newPassengerse = newPassengerse)
+    );
+    this.dataService.castBag.subscribe((newBag) => (this.newBag = newBag));
+    this.dataService.castPassengerse.subscribe(
+      (newPassengerse) => (this.newPassengerse = newPassengerse)
+    );
+    this.weatherService.nameCity = 'Wrocław';
+    this.weatherService.getCity().subscribe((data: any) => {
+      this.dataTemp = data;
+    });
+    this.weatherService.nameWarsaw = 'Warszawa';
+    this.weatherService.cityWarsaw().subscribe((data: any) => {
+      this.warsawTemp = data;
+    });
+    this.weatherService.nameLondon = 'London';
+    this.weatherService.cityLondon().subscribe((data: any) => {
+      this.londonTemp = data;
+    });
+    this.weatherService.nameNewYork = 'New York';
+    this.weatherService.cityNewYork().subscribe((data: any) => {
+      this.newyorkTemp = data;
+    });
+  }
+
+
   tempCites() {
     return Math.round(this.dataTemp.main?.temp - this.kalwinTemp);
   }
@@ -44,47 +92,8 @@ export class SummationComponent implements OnInit {
   cityNewYork() {
     return Math.round(this.newyorkTemp.main?.temp - this.kalwinTemp);
   }
+
   
-  ngOnInit(): void {
-    
-    this.dataService. castOrigin.subscribe(newOrigin => (this. newOrigin = newOrigin));
-    this.dataService. castDeparture.subscribe(newDeparture => (this. newDeparture= newDeparture));
-    this.dataService. castDate.subscribe(newDate => (this. newDate= newDate));
-    this.dataService. castPassengerse.subscribe(newPassengerse => (this. newPassengerse= newPassengerse));
-    this.dataService. castBag.subscribe(newBag => (this.newBag = newBag));
-    this.dataService. castPassengerse.subscribe(newPassengerse => (this. newPassengerse= newPassengerse));
-    this.weatherService.nameCity = 'Wrocław';
-    this.weatherService.getCity().subscribe((data: any) => {
-      this.dataTemp = data;
-     
-    });
-    this.weatherService.nameWarsaw = 'Warszawa';
-    this.weatherService.cityWarsaw().subscribe((data: any) => {
-      this.warsawTemp = data;
-      
-     
-    });
-    this.weatherService.nameLondon = 'London';
-    this.weatherService.cityLondon().subscribe((data: any) => {
-      this.londonTemp = data;
-      
-     
-    });
-    this.weatherService.nameNewYork = 'New York';
-    this.weatherService.cityNewYork().subscribe((data: any) => {
-      this.newyorkTemp = data;
-      
-     
-    });
-  }
-
-  ticketOne: any = '';
-  ticketTwo: any = '';
-  ticketThree: any = '';
-  bag: any = '';
-  sum: number = 0;
-
-
   calculateSum() {
     const value1 = parseFloat(this.ticketOne);
     const value2 = parseFloat(this.ticketTwo);
@@ -93,38 +102,26 @@ export class SummationComponent implements OnInit {
     if (value2 !== 100 && value2 !== 200) {
       this.sum = value1 + value4;
     } else if (value3 !== 100 && value3 !== 200) {
-      this.sum = value1 + value2 +value4
+      this.sum = value1 + value2 + value4;
     } else {
-      this.sum = value1 + value2 + value3 + value4 ;
+      this.sum = value1 + value2 + value3 + value4;
     }
   }
 
   sendForm() {
     this.dataService.editBag(this.sum);
-    
   }
- 
+
   @ViewChild('myForm') myForm!: NgForm;
-  formData = {
-    name: '',
-    email: ''
-  };
 
   onSubmit() {
     if (this.myForm.valid) {
-      this.calculateSum()
+      this.calculateSum();
       this.sendForm();
-
     }
   }
-
-  visible: boolean = false;
 
   onclick() {
     this.visible = !this.visible;
   }
-  buyUrl: string =
-  'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/master/src/app/components/images/arrow2.png';
-
-descriptionBuy: string = ' This is plane';
 }

@@ -1,17 +1,8 @@
-import { Component, OnInit, ViewChild  } from '@angular/core';
-import {
-  FormArray,
-  FormGroup,
-  FormBuilder,
-  FormControl,
-  Validators,
-} from '@angular/forms';
-
-import { NgForm, ValidatorFn } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { WeatherService } from 'src/app/services/weather.service';
-import { City, WeatherInfos } from 'src/interfaces/interfaces_custom';
+import { City } from 'src/interfaces/interfaces_custom';
 import { DataService } from 'src/app/services/data.service';
-
 
 @Component({
   selector: 'app-choice',
@@ -20,15 +11,18 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class ChoiceComponent implements OnInit {
   origin: string = '';
-  origin1: string = '';
   departure: string = '';
   passengers: string = '';
   date: string = '';
-  name: string = '';
+
   cities: City[] = [];
   selectedCity!: City;
   updatedCity!: City;
+
   isHovered: any;
+
+  visible: boolean = false;
+
   constructor(
     private weatherService: WeatherService,
     private dataService: DataService
@@ -49,15 +43,13 @@ export class ChoiceComponent implements OnInit {
     this.dataService.editPassengerse(this.passengers);
   }
 
-  visible: boolean = false;
-
   onclick() {
     this.visible = !this.visible;
   }
   @ViewChild('myForm') myForm!: NgForm;
   onSubmit() {
-    if (this.myForm.valid) { this.onclick();
-      
+    if (this.myForm.valid) {
+      this.onclick();
     }
   }
   getCurrentDate(): string {
@@ -66,7 +58,6 @@ export class ChoiceComponent implements OnInit {
     let month: string | number = today.getMonth() + 1;
     let day: string | number = today.getDate();
 
-    // Dodaj zero przed miesiącem i dniem, jeśli są mniejsze niż 10
     if (month < 10) {
       month = '0' + month;
     }
