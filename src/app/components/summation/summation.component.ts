@@ -20,6 +20,8 @@ export class SummationComponent implements OnInit {
   newyorkTemp: any = '';
   kalwinTemp: number = 273.15;
 
+
+
   user!: string;
   newUser!: string;
   newOrigin!: string;
@@ -97,14 +99,11 @@ export class SummationComponent implements OnInit {
   calculateSum() {
     const value1 = parseFloat(this.ticketOne);
     const value2 = parseFloat(this.ticketTwo);
-    const value3 = parseFloat(this.ticketThree);
-    const value4 = parseFloat(this.bag);
-    if (value2 !== 100 && value2 !== 200) {
-      this.sum = value1 + value4;
-    } else if (value3 !== 100 && value3 !== 200) {
-      this.sum = value1 + value2 + value4;
+    const value3 = parseFloat(this.bag);
+    if (value2 !== 210 && value2 !== 200 && value2 !== 240 && value2 !== 200 && value2 !== 400 && value2 !== 440) {
+      this.sum = value1 + value3;
     } else {
-      this.sum = value1 + value2 + value3 + value4;
+      this.sum = value1 + value2 + value3;
     }
   }
 

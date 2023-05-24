@@ -35,12 +35,12 @@
                   </select>
                 </div>
                 <div class="exchange__price">
-                  <div *ngIf="freeOne === 'PL'">{{ ticketBuisnesPl }} PLN</div>
+                  <div *ngIf="freeOne === 'PL'">{{ b3 }} PLN</div>
                   <div *ngIf="freeOne === 'EUR'">
-                    {{ ticketBuisnesEUR }} EUR
+                    {{ b3 / euro | number:'1.1-1' }} EUR
                   </div>
                   <div *ngIf="freeOne === 'USD'">
-                    {{ ticketBuisnesUSD }} USD
+                    {{ b3 / dollar | number:'1.1-1' }} USD
                   </div>
                 </div>
               </div>
@@ -73,12 +73,12 @@
                   </select>
                 </div>
                 <div class="exchange__price">
-                  <div *ngIf="freeTwo === 'PL'">{{ ticketEconomicPl }} PLN</div>
+                  <div *ngIf="freeTwo === 'PL'">{{ e2 }} PLN</div>
                   <div *ngIf="freeTwo === 'EUR'">
-                    {{ ticketEconomicEUR }} EUR
+                    {{ e2 / euro | number:'1.1-1' }} EUR
                   </div>
                   <div *ngIf="freeTwo === 'USD'">
-                    {{ ticketEconomicUSD }} USD
+                    {{ e2 / dollar | number:'1.1-1' }} USD
                   </div>
                 </div>
               </div>
@@ -130,12 +130,12 @@
                 </select>
               </div>
               <div class="exchange__price">
-                <div *ngIf="freeThree === 'PL'">{{ ticketEconomicPl }} PLN</div>
+                <div *ngIf="freeThree === 'PL'">{{ e9 }} PLN</div>
                 <div *ngIf="freeThree === 'EUR'">
-                  {{ ticketEconomicEUR }} EUR
+                  {{ e9 / euro | number:'1.1-1' }} EUR
                 </div>
                 <div *ngIf="freeThree === 'USD'">
-                  {{ ticketEconomicUSD }} USD
+                  {{ e9 / dollar | number:'1.1-1' }} USD
                 </div>
               </div>
             </div>
@@ -171,9 +171,9 @@
                 </select>
               </div>
               <div class="exchange__price">
-                <div *ngIf="freeFour === 'PL'">{{ ticketBuisnesPl }} PLN</div>
-                <div *ngIf="freeFour === 'EUR'">{{ ticketBuisnesEUR }} EUR</div>
-                <div *ngIf="freeFour === 'USD'">{{ ticketBuisnesUSD }} USD</div>
+                <div *ngIf="freeFour === 'PL'">{{ b14 }} PLN</div>
+                <div *ngIf="freeFour === 'EUR'">{{ b14 / euro | number:'1.1-1' }} EUR</div>
+                <div *ngIf="freeFour === 'USD'">{{ b14 / dollar | number:'1.1-1' }} USD</div>
               </div>
             </div>
           </div>
@@ -206,12 +206,12 @@
                 </select>
               </div>
               <div class="exchange__price">
-                <div *ngIf="freeFive === 'PL'">{{ ticketEconomicPl }} PLN</div>
+                <div *ngIf="freeFive === 'PL'">{{ e14 }} PLN</div>
                 <div *ngIf="freeFive === 'EUR'">
-                  {{ ticketEconomicEUR }} EUR
+                  {{ e14 / euro | number:'1.1-1' }} EUR
                 </div>
                 <div *ngIf="freeFive === 'USD'">
-                  {{ ticketEconomicUSD }} USD
+                  {{ e14 / dollar | number:'1.1-1' }} USD
                 </div>
               </div>
             </div>

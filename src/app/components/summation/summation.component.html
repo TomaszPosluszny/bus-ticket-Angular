@@ -23,11 +23,11 @@
           #departurePlace="ngModel"
         >
           <option value="" disabled>Ticket</option>
-          <option value="400">B3</option>
-          <option value="200">E2</option>
-          <option value="200">E9</option>
-          <option value="400">B14</option>
-          <option value="200">E14</option>
+          <option value="440">B3 - 440 PLN</option>
+          <option value="200">E2 - 200 PLN</option>
+          <option value="210">E9 -210 PLN</option>
+          <option value="400">B14 - 400 PLN</option>
+          <option value="220">E14 - 220 PLN</option>
         </select>
       </div>
       <div>
@@ -48,7 +48,7 @@
         >
           <option value="" disabled>Bag</option>
           <option value="50">Small - 50 PLN</option>
-          <option value="80">Madium - 70 PLN</option>
+          <option value="70">Medium - 70 PLN</option>
           <option value="100">Big - 100 PLN</option>
         </select>
       </div>
@@ -74,11 +74,11 @@
           #departurePlace="ngModel"
         >
           <option value="" disabled>Ticket</option>
-          <option value="400">B3</option>
-          <option value="200">E2</option>
-          <option value="200">E9</option>
-          <option value="400">B14</option>
-          <option value="200">E14</option>
+          <option *ngIf="ticketTwo != 440" value="440">B3 - 440 PLN</option>
+          <option *ngIf="ticketTwo != 200" value="200">E2 - 200 PLN</option>
+          <option *ngIf="ticketTwo != 210" value="210">E9 - 210 PLN</option>
+          <option *ngIf="ticketTwo != 400" value="400">B14 - 400 PLN</option>
+          <option *ngIf="ticketTwo != 220" value="220">E14 - 220 PLN</option>
         </select>
       </div>
       <div>
@@ -98,11 +98,11 @@
           #departurePlace="ngModel"
         >
           <option value="" disabled>Ticket</option>
-          <option value="400">B3</option>
-          <option value="200">E2</option>
-          <option value="200">E9</option>
-          <option value="400">B14</option>
-          <option value="200">E14</option>
+          <option *ngIf="ticketOne != 440" value="440">B3 - 440 PLN</option>
+          <option *ngIf="ticketOne != 200" value="200">E2- 200 PLN</option>
+          <option *ngIf="ticketOne != 210" value="210">E9 - 210 PLN</option>
+          <option *ngIf="ticketOne != 400" value="400">B14- 400 PLN</option>
+          <option *ngIf="ticketOne != 220" value="220">E14 - 220 PLN</option>
         </select>
       </div>
       <div
@@ -123,7 +123,7 @@
         >
           <option value="" disabled>Bag</option>
           <option value="50">Small - 50 PLN</option>
-          <option value="80">Madium - 70 PLN</option>
+          <option value="70">Medium - 70 PLN</option>
           <option value="100">Big - 100 PLN</option>
         </select>
       </div>
@@ -131,105 +131,6 @@
     </form>
   </div>
 
-  <div *ngIf="newPassengerse === '3'">
-    <form (ngSubmit)="onSubmit()" #myForm="ngForm" novalidate>
-      <div>
-        <div
-          *ngIf="myForm.submitted && myForm.controls['ticketOne'].invalid"
-          class="summary__error"
-        >
-          Choose a ticket
-        </div>
-        <select
-          class="summary__select"
-          placeholder="name"
-          [(ngModel)]="ticketOne"
-          id="ticketOne"
-          name="ticketOne"
-          required
-          #departurePlace="ngModel"
-        >
-          <option value="" disabled>Ticket</option>
-          <option value="400">B3</option>
-          <option value="200">E2</option>
-          <option value="200">E9</option>
-          <option value="400">B14</option>
-          <option value="200">E14</option>
-        </select>
-      </div>
-      <div>
-        <div
-          *ngIf="myForm.submitted && myForm.controls['ticketTwo'].invalid"
-          class="summary__error"
-        >
-          Choose a ticket
-        </div>
-        <select
-          class="summary__select"
-          placeholder="name"
-          id="ticketTwo"
-          [(ngModel)]="ticketTwo"
-          name="ticketTwo"
-          required
-          #departurePlace="ngModel"
-        >
-          <option value="" disabled>Ticket</option>
-          <option value="400">B3</option>
-          <option value="200">E2</option>
-          <option value="200">E9</option>
-          <option value="400">B14</option>
-          <option value="200">E14</option>
-        </select>
-      </div>
-      <div>
-        <div
-          *ngIf="myForm.submitted && myForm.controls['ticketThree'].invalid"
-          class="summary__error"
-        >
-          Choose a ticket
-        </div>
-        <select
-          class="summary__select"
-          placeholder="name"
-          id="ticketThree "
-          [(ngModel)]="ticketThree"
-          name="ticketThree"
-          required
-          #departurePlac="ngModel"
-        >
-          <option value="" disabled>Ticket</option>
-          <option value="400">B3</option>
-          <option value="200">E2</option>
-          <option value="200">E9</option>
-          <option value="400">B14</option>
-          <option value="200">E14</option>
-        </select>
-      </div>
-      <div
-        *ngIf="myForm.submitted && myForm.controls['bag'].invalid"
-        class="summary__error"
-      >
-        Choose a bag
-      </div>
-      <div>
-        <select
-          class="summary__bag"
-          id="bag"
-          placeholder="name"
-          [(ngModel)]="bag"
-          name="bag"
-          required
-          #bagName="ngModel"
-        >
-          <option value="" disabled>Bag</option>
-          <option value="50">Small - 50 PLN</option>
-          <option value="80">Madium - 70 PLN</option>
-          <option value="100">Big - 100 PLN</option>
-        </select>
-      </div>
-      <button type="submit" class="summary__button">Apply</button>
-    </form>
-  </div>
   <div class="summary__line"></div>
 
   <p class="summary__txt">Origin: {{ newOrigin }}</p>

@@ -18,12 +18,14 @@ export class PlacesComponent implements OnInit {
 
   visible: boolean = false;
 
-  ticketBuisnesPl: number = 400;
-  ticketBuisnesEUR: number = 90;
-  ticketBuisnesUSD: number = 96;
-  ticketEconomicPl: number = 200;
-  ticketEconomicEUR: number = 45;
-  ticketEconomicUSD: number = 48;
+  b3: number = 440;
+  e2: number = 200;
+  e9: number = 210;
+  b14: number = 400;
+  e14: number = 220;
+
+  euro: number = 4.5;
+  dollar: number = 4.18;
 
   exchange: any;
 

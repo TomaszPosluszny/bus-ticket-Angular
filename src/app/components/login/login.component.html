@@ -1,8 +1,11 @@
 <p>Log in</p>
+<form (ngSubmit)="onSubmit()" #myForm="ngForm" novalidate>
 <select class="login" [(ngModel)]="login">
-  <option value="" disabled>Name</option>
+ 
   <option *ngFor="let item of myData">{{ item.name }}</option>
 </select>
 <div>
-  <button routerLink="/place" class="button" (click)="sendForm()">Login</button>
+  <button type="submit" class="button" (click)="sendForm()">Login</button>
+
 </div>
+</form>
