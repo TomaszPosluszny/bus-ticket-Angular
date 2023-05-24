@@ -1,20 +1,11 @@
-
 <div *ngIf="city && weatherInfo" class="weather-detail">
-	<header>
-		<h2>{{city.name}}</h2>
-	</header>
+  <header>
+    <h2>{{ city.name }}</h2>
+  </header>
 
-	<main>
-
-	
-
-		<div class="main-info">
-			<p class="main-info__temp">{{weatherInfo.main.temp}}°C</p>
-			
-		</div>
-
-	</main>
-
-	
-
+  <main>
+    <div class="main-info">
+      <p class="main-info__temp">{{ weatherInfo.main.temp }}°C</p>
+    </div>
+  </main>
 </div>

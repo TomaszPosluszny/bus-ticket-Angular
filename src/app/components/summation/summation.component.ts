@@ -118,4 +118,13 @@ export class SummationComponent implements OnInit {
     }
   }
 
+  visible: boolean = false;
+
+  onclick() {
+    this.visible = !this.visible;
+  }
+  buyUrl: string =
+  'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/master/src/app/components/images/arrow2.png';
+
+descriptionBuy: string = ' This is plane';
 }

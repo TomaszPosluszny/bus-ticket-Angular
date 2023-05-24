@@ -1,0 +1,81 @@
+.summary {
+  &__one {
+    display: flex;
+    justify-content: center;
+  }
+  &__select {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    color: white;
+    background-color: black;
+    width: 100%;
+    padding: 3px;
+    font-size: 14px;
+    border: 1px solid green;
+    border-radius: 3px;
+  }
+  &__bag {
+    color: white;
+    background-color: black;
+    width: 100%;
+    padding: 3px;
+    font-size: 14px;
+    border: 1px solid green;
+    border-radius: 3px;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    background-color: green;
+    color: white;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+    box-shadow: 0 2px 50px gray;
+    cursor: pointer;
+  }
+  &__button:hover {
+    background-color: black;
+    color: white;
+  }
+  &__line {
+    width: 100%px;
+    margin-top: 5px;
+    height: 3px;
+    background-color: black;
+  }
+  &__txt {
+    font-size: 19px;
+  }
+  &__tmp {
+    font-size: 21px;
+    margin-left: 40px;
+    color: green;
+  }
+  &__buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    background-color: green;
+    color: white;
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+    box-shadow: 0 2px 50px gray;
+    cursor: pointer;
+  }
+  &__buy:hover {
+    background-color: black;
+    color: white;
+  }
+}

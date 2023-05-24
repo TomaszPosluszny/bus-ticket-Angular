@@ -15,16 +15,18 @@
   width: 430px;
   height: 210px;
   background-color: white;
-  margin-left: 700px;
+  margin-left: 400px;
   margin-top: 30px;
   border-radius: 10px;
 }
 .summation {
+  display: flex;
+  justify-content: center;
   position: absolute;
   width: 280px;
-  height:450px;
-  margin-left: 250px;
-  margin-top: 90px;
+  height: 550px;
+  margin-left: 930px;
+  margin-top: 30px;
   background-color: white;
   border: 1px solid green;
   border-radius: 4px;
