@@ -1,4 +1,4 @@
-# Ticket Reservation - tax booking app
+# Ticket Reservation - ticket booking app
 
 ## Technologies
 
