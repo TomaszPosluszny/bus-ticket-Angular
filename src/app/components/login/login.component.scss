@@ -6,6 +6,10 @@
   background-color: black;
   border: 1px solid green;
   border-radius: 3px;
+  &__error {
+    margin-bottom: 10px;
+    color: white;
+  }
 }
 .button {
   margin-top: 40px;
