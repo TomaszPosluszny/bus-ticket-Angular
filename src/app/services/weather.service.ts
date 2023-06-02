@@ -17,7 +17,7 @@ export class WeatherService {
   nameNewYork: string = '';
   nameWarsaw: string = '';
   getCities$: Observable<City[]> = this.http
-    .get<City[]>('/assets/cities.json')
+    .get<City[]>('/assets/data/cities.json')
     .pipe(
       //TODO to remove, for quick debug only
       tap((r) => console.log(r))

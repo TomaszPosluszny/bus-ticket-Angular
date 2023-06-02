@@ -23,6 +23,6 @@ export class LoginComponent implements OnInit {
   }
 
   getData() {
-    return this.http.get('assets/login.json');
+    return this.http.get('assets/data/login.json');
   }
 }
