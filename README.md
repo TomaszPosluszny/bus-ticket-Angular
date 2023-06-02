@@ -19,10 +19,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - RWD
 - BEM
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Clone the repository:
+2. Install the dependencies
+3. Start the development server:
+
+The application will be accessible at `http://localhost:4200`.
 
 ## Setup
 
-[Link to the page](https://tomaszposluszny.github.io/airline-ticket-reservation-Angular)
+[Link to the page](https://tomaszposluszny.github.io/airline-ticket-reservation-Angular/)
