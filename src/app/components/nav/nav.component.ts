@@ -38,12 +38,12 @@ export class NavComponent implements OnInit {
   }
 
   logoUrl: string =
-    'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/master/src/app/components/images/logo.png';
+    'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/master/src/assets/img/logo.png';
 
   descriptionLogo: string = ' This is plane';
 
   arrowUrl: string =
-    'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/master/src/app/components/images/arrow2.png';
+    'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/master/src/assets/img/arrow2.png';
 
   descriptionArrow: string = ' This is arrow';
   visible: boolean = false;

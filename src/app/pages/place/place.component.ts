@@ -11,7 +11,7 @@ export class PlaceComponent implements OnInit {
   constructor(private dataService: DataService) {}
   description: string = ' This is man';
   choiceUrl: string =
-    'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/master/src/app/components/images/choice.jpg';
+    'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/master/src/assets/img/choice.jpg';
 
   ngOnInit() {}
 }
