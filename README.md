@@ -25,4 +25,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Setup
 
-[Link to the page](https://tomaszposluszny.github.io/airline-ticket-reservation-Angular/place)
+[Link to the page](https://tomaszposluszny.github.io/airline-ticket-reservation-Angular)
