@@ -38,7 +38,7 @@ export class NavComponent implements OnInit {
   }
 
   logoUrl: string =
-    'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/master/src/assets/img/buslogo.png';
+    'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/master/src/assets/img/buslogo1.png';
 
   descriptionLogo: string = ' This is plane';
 

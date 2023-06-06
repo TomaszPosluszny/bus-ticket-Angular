@@ -9,7 +9,7 @@ import { WeatherService } from 'src/app/services/weather.service';
 export class ReservationComponent implements OnInit {
   constructor(private weatherService: WeatherService) {}
   planeUrl: string =
-    'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/master/src/assets/img/bus.jpg';
+    'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/master/src/assets/img/bus2.jpg';
   description: string = ' This is plane';
   ngOnInit(): void {}
 }
