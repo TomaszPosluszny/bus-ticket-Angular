@@ -44,7 +44,7 @@ export class SummationComponent implements OnInit {
   sum: number = 0;
 
   buyUrl: string =
-    'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/master/src/assets/img/buy.jpg';
+    'https://raw.githubusercontent.com/TomaszPosluszny/airline-ticket-reservation-Angular/master/src/assets/img/finish.jpg';
 
   descriptionBuy: string = ' This is plane';
 
