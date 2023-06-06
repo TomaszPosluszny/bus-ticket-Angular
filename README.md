@@ -27,6 +27,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 The application will be accessible at `http://localhost:4200`.
 
+## Screenshots
+
+![Screenshot](screenshot/place.png)
+
+![Screenshot](screenshot/reservation.png)
+
+
 ## Setup
 
 [Link to the page](https://tomaszposluszny.github.io/bus-ticket-Angular/)
