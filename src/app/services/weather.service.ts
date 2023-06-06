@@ -14,7 +14,7 @@ export class WeatherService {
 
   nameCity: string = '';
   nameLondon: string = '';
-  nameNewYork: string = '';
+  nameRome: string = '';
   nameWarsaw: string = '';
   getCities$: Observable<City[]> = this.http
     .get<City[]>('/assets/data/cities.json')
@@ -40,9 +40,9 @@ export class WeatherService {
       `https://api.openweathermap.org/data/2.5/weather?q=${this.nameWarsaw}&appid=f9fe3ecd6dcb482c2724f8261001d8e4`
     );
   }
-  cityNewYork() {
+  cityRome() {
     return this.http.get(
-      `https://api.openweathermap.org/data/2.5/weather?q=${this.nameNewYork}&appid=f9fe3ecd6dcb482c2724f8261001d8e4`
+      `https://api.openweathermap.org/data/2.5/weather?q=${this.nameRome}&appid=f9fe3ecd6dcb482c2724f8261001d8e4`
     );
   }
   cityLondon() {

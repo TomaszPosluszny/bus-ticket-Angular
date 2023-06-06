@@ -17,7 +17,7 @@ export class SummationComponent implements OnInit {
   dataTemp: any = '';
   warsawTemp: any = '';
   londonTemp: any = '';
-  newyorkTemp: any = '';
+  romeTemp: any = '';
   kalwinTemp: number = 273.15;
 
 
@@ -75,9 +75,9 @@ export class SummationComponent implements OnInit {
     this.weatherService.cityLondon().subscribe((data: any) => {
       this.londonTemp = data;
     });
-    this.weatherService.nameNewYork = 'New York';
-    this.weatherService.cityNewYork().subscribe((data: any) => {
-      this.newyorkTemp = data;
+    this.weatherService.nameRome = 'Rome';
+    this.weatherService.cityRome().subscribe((data: any) => {
+      this.romeTemp = data;
     });
   }
 
@@ -91,8 +91,8 @@ export class SummationComponent implements OnInit {
   cityLondon() {
     return Math.round(this.londonTemp.main?.temp - this.kalwinTemp);
   }
-  cityNewYork() {
-    return Math.round(this.newyorkTemp.main?.temp - this.kalwinTemp);
+  cityRome() {
+    return Math.round(this.romeTemp.main?.temp - this.kalwinTemp);
   }
 
   
