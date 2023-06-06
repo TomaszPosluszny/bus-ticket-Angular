@@ -67,7 +67,7 @@
           class="form__error"
           *ngIf="myForm.submitted && myForm.controls['departure'].invalid"
         >
-          Select a departure
+          Select a destination
         </div>
         <div class="form">
           <select
@@ -79,7 +79,7 @@
             required
             #departurePlace="ngModel"
           >
-            <option value="" disabled>Departure</option>
+            <option value="" disabled>Destination</option>
             <option value="Warsaw">Warsaw</option>
             <option value="London">London</option>
             <option value="New York">New York</option>
