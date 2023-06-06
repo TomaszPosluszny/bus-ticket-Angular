@@ -29,9 +29,8 @@ The application will be accessible at `http://localhost:4200`.
 
 ## Screenshots
 
-![Screenshot](screenshots/place.png)
-
 ![Screenshot](screenshots/reservation.png)
+![Screenshot](screenshots/place.png)
 
 
 ## Setup
